@@ -1,0 +1,4164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مراجعة الكيمياء | الصف الأول الثانوي الترم الأول | Antar Al-Shuwaikh</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:   #0f3460;
+  --navy2:  #162447;
+  --gold:   #e5b40d;
+  --gold2:  #c89b0a;
+  --green:  #1a9a5c;
+  --lgreen: #edfaf3;
+  --dgreen: #0d6b3e;
+  --blue:   #1565c0;
+  --lblue:  #e8f0fe;
+  --amber:  #f57c00;
+  --lamber: #fff3e0;
+  --red:    #c62828;
+  --border: #d0dbe8;
+  --text:   #1e293b;
+  --muted:  #64748b;
+  --bg:     #f8fafc;
+  --white:  #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Cairo', 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  direction: rtl;
+}
+
+/* ── PRINT ── */
+@media print {
+  .no-print { display: none; }
+  body { background: white; font-size: 12px; }
+  .page-break { page-break-before: always; }
+  .lesson-block { break-inside: avoid; }
+}
+
+/* ── HEADER ── */
+.site-header {
+  background: linear-gradient(135deg, var(--navy2) 0%, var(--navy) 60%, #1a4a7a 100%);
+  color: white;
+  padding: 28px 32px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.site-header::before {
+  content: '';
+  position: absolute;
+  top: -60px; left: -60px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: rgba(229,180,13,.10);
+}
+.site-header::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; right: -40px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: rgba(229,180,13,.07);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+.header-badge {
+  background: var(--gold);
+  color: var(--navy2);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.header-title {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.header-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,.75);
+}
+.header-meta {
+  text-align: left;
+  font-size: 13px;
+  color: rgba(255,255,255,.8);
+  line-height: 1.8;
+  direction: ltr;
+}
+.header-meta strong {
+  color: var(--gold);
+  display: block;
+  font-size: 15px;
+}
+
+/* ── STATS BAR ── */
+.stats-bar {
+  background: var(--navy);
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  border-bottom: 3px solid var(--gold);
+}
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  color: white;
+  border-left: 1px solid rgba(255,255,255,.1);
+}
+.stat-item:last-child { border-left: none; }
+.stat-num {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+.stat-lbl { font-size: 12px; color: rgba(255,255,255,.7); }
+
+/* ── TOC ── */
+.toc-bar {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+.toc-bar span { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.toc-link {
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Cairo', sans-serif;
+  padding: 5px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all .15s;
+}
+.toc-link:hover {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+}
+
+/* ── MAIN CONTENT ── */
+.content { max-width: 900px; margin: 0 auto; padding: 28px 20px 60px; }
+
+/* ── LESSON HEADER ── */
+.lesson-block { margin-bottom: 36px; }
+.lesson-hdr {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2.5px solid var(--gold);
+}
+.lesson-num {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  color: var(--navy2);
+  font-weight: 900;
+  font-size: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(229,180,13,.35);
+}
+.lesson-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+/* ── SECTION PILL ── */
+.section-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 16px;
+  border-radius: 24px;
+  font-weight: 700;
+  font-size: 13px;
+  margin: 10px 0 12px;
+}
+.pill-blue  { background: var(--navy);  color: white; }
+.pill-green { background: var(--green); color: white; }
+.pill-gold  { background: linear-gradient(90deg, var(--gold), var(--gold2)); color: var(--navy2); }
+.pill-amber { background: var(--amber); color: white; }
+
+/* ── MCQ GRID ── */
+.mcq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+@media (max-width: 620px) { .mcq-grid { grid-template-columns: 1fr; } }
+
+/* ── MCQ CARD ── */
+.mcq {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  transition: box-shadow .15s;
+}
+.mcq:hover { box-shadow: 0 4px 14px rgba(15,52,96,.12); }
+.mcq-num {
+  background: var(--navy);
+  color: white;
+  font-weight: 800;
+  font-size: 14px;
+  min-width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.mcq-body { padding: 9px 13px; flex: 1; }
+.mcq-q {
+  font-size: 13.5px;
+  color: var(--text);
+  margin-bottom: 7px;
+  line-height: 1.55;
+}
+.mcq-ans {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ans-dot {
+  min-width: 28px; height: 28px;
+  background: linear-gradient(135deg, var(--green), #148a4f);
+  color: white;
+  font-weight: 800;
+  font-size: 13px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ans-text {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--dgreen);
+}
+
+/* ── MCQ SINGLE (full width) ── */
+.mcq-single { grid-column: 1 / -1; }
+
+/* ── WRITTEN CARD ── */
+.wcard {
+  background: var(--lgreen);
+  border-right: 4px solid var(--green);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+}
+.wcard-q {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.wcard-a {
+  font-size: 14px;
+  color: var(--dgreen);
+  line-height: 1.8;
+}
+.wcard-a .step {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.step-dot {
+  width: 7px; height: 7px;
+  background: var(--green);
+  border-radius: 50%;
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+
+/* ── CALC CARD ── */
+.ccard {
+  background: var(--lamber);
+  border-right: 4px solid var(--amber);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+}
+.ccard-q {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--navy);
+  margin-bottom: 7px;
+}
+.ccard-steps { font-size: 13.5px; color: #5d4037; line-height: 1.9; }
+.ccard-result {
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--amber);
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1.5px dashed #f0a030;
+}
+
+/* ── TABLE ── */
+.tbl-wrap { overflow-x: auto; margin-bottom: 12px; }
+table.ktbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 420px;
+}
+.ktbl th {
+  background: var(--navy);
+  color: var(--gold);
+  font-weight: 700;
+  padding: 9px 10px;
+  border: 1px solid var(--navy2);
+  text-align: center;
+}
+.ktbl td {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  text-align: center;
+  vertical-align: middle;
+}
+.ktbl tr:nth-child(even) td { background: var(--lblue); }
+.ktbl .ans-cell { font-weight: 700; color: var(--dgreen); }
+.ktbl .chk { color: var(--green); font-weight: 900; font-size: 16px; }
+.ktbl .crs { color: var(--red); font-size: 15px; }
+
+/* ── IONIC EQ CARD ── */
+.ionic-card {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-right: 4px solid var(--blue);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+.ionic-title {
+  font-weight: 800;
+  font-size: 13.5px;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.ionic-row {
+  font-size: 13px;
+  color: var(--text);
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed var(--border);
+  line-height: 1.6;
+}
+.ionic-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.ionic-label {
+  display: inline-block;
+  background: var(--navy);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 6px;
+}
+.ionic-final {
+  background: var(--lblue);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+/* ── DIVIDER ── */
+.divider {
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  margin: 28px 0 24px;
+  border-radius: 2px;
+}
+
+/* ── PRINT BTN ── */
+.print-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: var(--navy);
+  color: white;
+  border: none;
+  padding: 13px 22px;
+  border-radius: 30px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(15,52,96,.4);
+  transition: all .15s;
+  z-index: 999;
+}
+.print-btn:hover {
+  background: var(--gold);
+  color: var(--navy2);
+  transform: translateY(-2px);
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  background: var(--navy2);
+  color: rgba(255,255,255,.7);
+  text-align: center;
+  padding: 18px;
+  font-size: 13px;
+}
+.site-footer strong { color: var(--gold); }
+
+/* ── DARK MODE ── */
+body.dark {
+  --bg: #0f172a; --white: #1e293b; --text: #e2e8f0;
+  --border: #334155; --navy: #1e3a5f; --navy2: #0f2340;
+  --muted: #94a3b8; --lblue: #1e3a5f; --lgreen: #0d2a1c;
+  --lamber: #2a1a00;
+}
+body.dark .site-header { background: linear-gradient(135deg,#060d1a,#0f2340,#1a3a5f); }
+body.dark .toc-bar { background: #1e293b; border-color: #334155; }
+body.dark .toc-link { background: #0f172a; border-color: #475569; color: #94a3b8; }
+body.dark .mcq { background: #1e293b; }
+body.dark .ktbl tr:nth-child(even) td { background: #1a2744; }
+body.dark .ktbl td { border-color: #334155; }
+
+/* ── HEADER TOOLS ── */
+.header-tools { display:flex; gap:8px; flex-wrap:wrap; margin-top:14px; }
+.tool-btn {
+  background: rgba(255,255,255,.12);
+  color: white;
+  border: 1.5px solid rgba(255,255,255,.25);
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .15s;
+  white-space: nowrap;
+}
+.tool-btn:hover { background: rgba(255,255,255,.22); }
+.download-btn { background: var(--gold); color: var(--navy2); border-color: var(--gold2); }
+.download-btn:hover { background: var(--gold2); }
+
+/* ── TEACHER CARD ── */
+.teacher-card {
+  background: rgba(255,255,255,.1);
+  border: 1.5px solid rgba(229,180,13,.4);
+  border-radius: 12px;
+  padding: 14px 20px;
+  text-align: center;
+  min-width: 170px;
+}
+.teacher-en {
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: .3px;
+  direction: ltr;
+  text-align: center;
+}
+.teacher-ar {
+  font-size: 13px;
+  color: rgba(255,255,255,.75);
+  margin-top: 2px;
+}
+.teacher-num {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-top: 4px;
+  direction: ltr;
+}
+
+/* ── HEADER LEFT ── */
+.header-left { flex: 1; }
+
+/* ── ANSWER TOGGLE ── */
+.ans-hidden .mcq-ans,
+.ans-hidden .wcard-a,
+.ans-hidden .ccard-result,
+.ans-hidden .ans-cell,
+.ans-hidden .chk,
+.ans-hidden .crs {
+  filter: blur(5px);
+  user-select: none;
+  transition: filter .2s;
+}
+.ans-hidden .mcq-ans:hover,
+.ans-hidden .wcard-a:hover,
+.ans-hidden .ccard-result:hover,
+.ans-hidden .ans-cell:hover {
+  filter: blur(0);
+}
+
+/* ── FONT SIZE CTRL ── */
+.font-ctrl { display:flex; align-items:center; gap:6px; }
+.font-btn {
+  width:28px; height:28px;
+  border-radius:50%;
+  border: 1.5px solid rgba(255,255,255,.3);
+  background: rgba(255,255,255,.12);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  display:flex; align-items:center; justify-content:center;
+  transition: all .15s;
+}
+.font-btn:hover { background: rgba(255,255,255,.25); }
+
+/* ── PROGRESS BAR ── */
+.progress-bar {
+  background: var(--navy2);
+  padding: 10px 32px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 12px;
+  color: rgba(255,255,255,.7);
+}
+.prog-track {
+  flex: 1;
+  height: 6px;
+  background: rgba(255,255,255,.15);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.prog-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), #f0c040);
+  border-radius: 3px;
+  width: 0%;
+  transition: width .4s ease;
+}
+
+/* ── LESSON DONE CHECKBOX ── */
+.lesson-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-right: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--muted);
+  user-select: none;
+}
+.lesson-check input { display: none; }
+.check-box {
+  width: 20px; height: 20px;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  transition: all .15s;
+}
+.lesson-check input:checked + .check-box {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+.lesson-block.done .lesson-hdr { opacity: .6; }
+.lesson-block.done .lesson-title { text-decoration: line-through; }
+
+/* ── PRINT HDR/FTR ── */
+@media print {
+  .print-header {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #0f3460;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    font-size: 11px;
+    color: #0f3460;
+  }
+  .print-footer {
+    display: block !important;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    padding-top: 6px;
+    font-size: 10px;
+    color: #666;
+  }
+  .ans-hidden .mcq-ans,
+  .ans-hidden .wcard-a,
+  .ans-hidden .ccard-result { filter: none !important; }
+}
+
+
+/* ══ SEARCH BAR ══ */
+.search-bar {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: sticky;
+  top: 48px;
+  z-index: 49;
+  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+}
+.search-bar input {
+  flex: 1;
+  padding: 8px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 24px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px;
+  outline: none;
+  background: var(--bg);
+  color: var(--text);
+  direction: rtl;
+  transition: border .15s;
+}
+.search-bar input:focus { border-color: var(--navy); }
+.search-icon { color: var(--muted); font-size: 16px; }
+.search-count {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+  min-width: 60px;
+  text-align: center;
+}
+.search-clear {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 4px;
+  display: none;
+}
+.search-clear.visible { display: block; }
+
+/* highlight search match */
+mark.hit {
+  background: #fef08a;
+  color: var(--text);
+  border-radius: 2px;
+  padding: 0 1px;
+}
+.mcq.no-match { display: none; }
+.wcard.no-match { display: none; }
+.ccard.no-match { display: none; }
+.lesson-block.all-hidden { opacity: .35; }
+.lesson-block.all-hidden .lesson-title::after {
+  content: ' — لا توجد نتائج';
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+/* ══ SUMMARY BOX ══ */
+.summary-box {
+  background: linear-gradient(135deg, #fffbeb, #fef9e7);
+  border: 1.5px solid #f0c040;
+  border-right: 5px solid var(--gold);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  position: relative;
+}
+.summary-box::before {
+  content: '📌 ملخص الدرس';
+  display: block;
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--gold2);
+  margin-bottom: 10px;
+  letter-spacing: .3px;
+}
+.summary-box ul {
+  margin: 0;
+  padding-right: 18px;
+  list-style: none;
+}
+.summary-box ul li {
+  font-size: 13.5px;
+  color: #4a3800;
+  line-height: 1.75;
+  padding: 1px 0;
+  position: relative;
+}
+.summary-box ul li::before {
+  content: '◆';
+  color: var(--gold);
+  font-size: 9px;
+  position: absolute;
+  right: -16px;
+  top: 5px;
+}
+.summary-key {
+  font-weight: 800;
+  color: var(--navy);
+}
+.summary-formula {
+  display: inline-block;
+  background: var(--navy);
+  color: #e5f0ff;
+  font-size: 12.5px;
+  padding: 1px 8px;
+  border-radius: 4px;
+  margin: 1px 2px;
+  font-family: monospace;
+}
+
+/* ══ SELF-TEST MODE ══ */
+.mcq.quiz-mode .mcq-ans { display: none; }
+.mcq.quiz-mode .quiz-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.choice-btn {
+  flex: 1 1 calc(50% - 6px);
+  min-width: 0;
+  padding: 6px 10px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Cairo', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: right;
+  transition: all .15s;
+  line-height: 1.4;
+}
+.choice-btn:hover:not(:disabled) {
+  background: var(--lblue);
+  border-color: var(--navy);
+}
+.choice-btn.correct {
+  background: #dcfce7;
+  border-color: var(--green);
+  color: var(--dgreen);
+}
+.choice-btn.wrong {
+  background: #fee2e2;
+  border-color: #dc2626;
+  color: #991b1b;
+}
+.choice-btn:disabled { cursor: default; }
+.quiz-reveal {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+  display: none;
+  align-items: center;
+  gap: 6px;
+}
+.quiz-reveal.show { display: flex; }
+.quiz-reveal .ans-dot { min-width: 24px; height: 24px; font-size: 12px; }
+
+/* score banner */
+.score-banner {
+  background: var(--navy);
+  color: white;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.score-banner.show { display: flex; }
+.score-num { font-weight: 900; font-size: 20px; color: var(--gold); }
+.score-reset {
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.3);
+  color: white;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* quiz mode toggle btn */
+.quiz-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  color: var(--navy);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all .15s;
+}
+.quiz-toggle.active {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+}
+
+/* dark mode adjustments */
+body.dark .summary-box { background: #1c1a00; border-color: #6b5a00; }
+body.dark .summary-box ul li { color: #e5d58a; }
+body.dark .search-bar { background: #1e293b; }
+body.dark .search-bar input { background: #0f172a; border-color: #334155; color: #e2e8f0; }
+body.dark mark.hit { background: #713f12; color: #fef9c3; }
+body.dark .choice-btn { background: #1e293b; border-color: #334155; color: #e2e8f0; }
+body.dark .choice-btn:hover:not(:disabled) { background: #1e3a5f; }
+
+
+/* ══ LESSON COLOR SYSTEM ══ */
+
+#d1 .lesson-num {
+  background: linear-gradient(135deg,#0f3460,#1a4a7a);
+  color: white;
+  box-shadow: 0 4px 12px rgba(15,52,96,.3);
+}
+#d1 .lesson-hdr {
+  border-bottom: 3px solid #0f3460;
+}
+#d1 .lesson-title {
+  color: #0f3460;
+}
+#d1 .mcq .mcq-num {
+  background: #0f3460;
+}
+#d1 .ans-dot {
+  background: linear-gradient(135deg,#0f3460,#1a4a7a);
+}
+#d1 .ans-text {
+  color: #0a2444;
+}
+#d1 .wcard {
+  background: #e8f0fe;
+  border-right: 4px solid #0f3460;
+}
+#d1 .wcard-q {
+  color: #0f3460;
+}
+#d1 .wcard-a {
+  color: #0a2444;
+}
+#d1 .step-dot {
+  background: #0f3460;
+}
+#d1 .ccard {
+  background: #e8f0fe;
+  border-right: 4px solid #0f3460;
+  border-left: none;
+}
+#d1 .ccard-q {
+  color: #0f3460;
+}
+#d1 .ccard-result {
+  color: #0f3460;
+  border-top-color: #0f346055;
+}
+#d1 .ktbl th {
+  background: #0f3460;
+}
+#d1 .ktbl tr:nth-child(even) td {
+  background: #e8f0fe;
+}
+#d1 .ionic-card {
+  border-right: 4px solid #0f3460;
+}
+#d1 .ionic-title {
+  color: #0f3460;
+}
+#d1 .ionic-label {
+  background: #0f3460;
+}
+#d1 .ionic-final {
+  background: #e8f0fe;
+  color: #0a2444;
+}
+#d1 .summary-box {
+  background: #e8f0fe;
+  border: 1.5px solid #0f346044;
+  border-right: 5px solid #0f3460;
+}
+#d1 .summary-box::before {
+  color: #0f3460;
+}
+#d1 .summary-box ul li::before {
+  color: #0f3460;
+}
+#d1 .summary-key {
+  color: #0f3460;
+}
+#d1 .summary-formula {
+  background: #0f3460;
+}
+#d1 .section-pill {
+  position: relative;
+}
+#d1 .divider-lesson {
+  background: linear-gradient(90deg, #0f3460, transparent);
+}
+#d1 .quiz-toggle {
+  border-color: #0f346055;
+  color: #0f3460;
+}
+#d1 .quiz-toggle.active {
+  background: #0f3460;
+  color: white;
+  border-color: #0f3460;
+}
+#d1 .score-banner {
+  background: #0f3460;
+}
+#d1 .check-box {
+  border-color: #0f346088;
+}
+#d1 .lesson-check input:checked + .check-box {
+  background: #0f3460;
+  border-color: #0f3460;
+}
+#d1 .choice-btn.correct {
+  background: #e8f0fe;
+  border-color: #0f3460;
+  color: #0a2444;
+}
+#d1 .toc-link-d1 {
+  background: #0f3460;
+  color: white;
+  border-color: #0f3460;
+}
+
+#d2 .lesson-num {
+  background: linear-gradient(135deg,#7b2d8b,#9c3cb0);
+  color: white;
+  box-shadow: 0 4px 12px rgba(123,45,139,.3);
+}
+#d2 .lesson-hdr {
+  border-bottom: 3px solid #7b2d8b;
+}
+#d2 .lesson-title {
+  color: #7b2d8b;
+}
+#d2 .mcq .mcq-num {
+  background: #7b2d8b;
+}
+#d2 .ans-dot {
+  background: linear-gradient(135deg,#7b2d8b,#9c3cb0);
+}
+#d2 .ans-text {
+  color: #5a1e68;
+}
+#d2 .wcard {
+  background: #f5e8fb;
+  border-right: 4px solid #7b2d8b;
+}
+#d2 .wcard-q {
+  color: #7b2d8b;
+}
+#d2 .wcard-a {
+  color: #5a1e68;
+}
+#d2 .step-dot {
+  background: #7b2d8b;
+}
+#d2 .ccard {
+  background: #f5e8fb;
+  border-right: 4px solid #7b2d8b;
+  border-left: none;
+}
+#d2 .ccard-q {
+  color: #7b2d8b;
+}
+#d2 .ccard-result {
+  color: #7b2d8b;
+  border-top-color: #7b2d8b55;
+}
+#d2 .ktbl th {
+  background: #7b2d8b;
+}
+#d2 .ktbl tr:nth-child(even) td {
+  background: #f5e8fb;
+}
+#d2 .ionic-card {
+  border-right: 4px solid #7b2d8b;
+}
+#d2 .ionic-title {
+  color: #7b2d8b;
+}
+#d2 .ionic-label {
+  background: #7b2d8b;
+}
+#d2 .ionic-final {
+  background: #f5e8fb;
+  color: #5a1e68;
+}
+#d2 .summary-box {
+  background: #f5e8fb;
+  border: 1.5px solid #7b2d8b44;
+  border-right: 5px solid #7b2d8b;
+}
+#d2 .summary-box::before {
+  color: #7b2d8b;
+}
+#d2 .summary-box ul li::before {
+  color: #7b2d8b;
+}
+#d2 .summary-key {
+  color: #7b2d8b;
+}
+#d2 .summary-formula {
+  background: #7b2d8b;
+}
+#d2 .section-pill {
+  position: relative;
+}
+#d2 .divider-lesson {
+  background: linear-gradient(90deg, #7b2d8b, transparent);
+}
+#d2 .quiz-toggle {
+  border-color: #7b2d8b55;
+  color: #7b2d8b;
+}
+#d2 .quiz-toggle.active {
+  background: #7b2d8b;
+  color: white;
+  border-color: #7b2d8b;
+}
+#d2 .score-banner {
+  background: #7b2d8b;
+}
+#d2 .check-box {
+  border-color: #7b2d8b88;
+}
+#d2 .lesson-check input:checked + .check-box {
+  background: #7b2d8b;
+  border-color: #7b2d8b;
+}
+#d2 .choice-btn.correct {
+  background: #f5e8fb;
+  border-color: #7b2d8b;
+  color: #5a1e68;
+}
+#d2 .toc-link-d2 {
+  background: #7b2d8b;
+  color: white;
+  border-color: #7b2d8b;
+}
+
+#d3 .lesson-num {
+  background: linear-gradient(135deg,#c62828,#e53935);
+  color: white;
+  box-shadow: 0 4px 12px rgba(198,40,40,.3);
+}
+#d3 .lesson-hdr {
+  border-bottom: 3px solid #c62828;
+}
+#d3 .lesson-title {
+  color: #c62828;
+}
+#d3 .mcq .mcq-num {
+  background: #c62828;
+}
+#d3 .ans-dot {
+  background: linear-gradient(135deg,#c62828,#e53935);
+}
+#d3 .ans-text {
+  color: #8b1a1a;
+}
+#d3 .wcard {
+  background: #fdecea;
+  border-right: 4px solid #c62828;
+}
+#d3 .wcard-q {
+  color: #c62828;
+}
+#d3 .wcard-a {
+  color: #8b1a1a;
+}
+#d3 .step-dot {
+  background: #c62828;
+}
+#d3 .ccard {
+  background: #fdecea;
+  border-right: 4px solid #c62828;
+  border-left: none;
+}
+#d3 .ccard-q {
+  color: #c62828;
+}
+#d3 .ccard-result {
+  color: #c62828;
+  border-top-color: #c6282855;
+}
+#d3 .ktbl th {
+  background: #c62828;
+}
+#d3 .ktbl tr:nth-child(even) td {
+  background: #fdecea;
+}
+#d3 .ionic-card {
+  border-right: 4px solid #c62828;
+}
+#d3 .ionic-title {
+  color: #c62828;
+}
+#d3 .ionic-label {
+  background: #c62828;
+}
+#d3 .ionic-final {
+  background: #fdecea;
+  color: #8b1a1a;
+}
+#d3 .summary-box {
+  background: #fdecea;
+  border: 1.5px solid #c6282844;
+  border-right: 5px solid #c62828;
+}
+#d3 .summary-box::before {
+  color: #c62828;
+}
+#d3 .summary-box ul li::before {
+  color: #c62828;
+}
+#d3 .summary-key {
+  color: #c62828;
+}
+#d3 .summary-formula {
+  background: #c62828;
+}
+#d3 .section-pill {
+  position: relative;
+}
+#d3 .divider-lesson {
+  background: linear-gradient(90deg, #c62828, transparent);
+}
+#d3 .quiz-toggle {
+  border-color: #c6282855;
+  color: #c62828;
+}
+#d3 .quiz-toggle.active {
+  background: #c62828;
+  color: white;
+  border-color: #c62828;
+}
+#d3 .score-banner {
+  background: #c62828;
+}
+#d3 .check-box {
+  border-color: #c6282888;
+}
+#d3 .lesson-check input:checked + .check-box {
+  background: #c62828;
+  border-color: #c62828;
+}
+#d3 .choice-btn.correct {
+  background: #fdecea;
+  border-color: #c62828;
+  color: #8b1a1a;
+}
+#d3 .toc-link-d3 {
+  background: #c62828;
+  color: white;
+  border-color: #c62828;
+}
+
+#d4 .lesson-num {
+  background: linear-gradient(135deg,#e65100,#f57c00);
+  color: white;
+  box-shadow: 0 4px 12px rgba(230,81,0,.3);
+}
+#d4 .lesson-hdr {
+  border-bottom: 3px solid #e65100;
+}
+#d4 .lesson-title {
+  color: #e65100;
+}
+#d4 .mcq .mcq-num {
+  background: #e65100;
+}
+#d4 .ans-dot {
+  background: linear-gradient(135deg,#e65100,#f57c00);
+}
+#d4 .ans-text {
+  color: #b84400;
+}
+#d4 .wcard {
+  background: #fff3e0;
+  border-right: 4px solid #e65100;
+}
+#d4 .wcard-q {
+  color: #e65100;
+}
+#d4 .wcard-a {
+  color: #b84400;
+}
+#d4 .step-dot {
+  background: #e65100;
+}
+#d4 .ccard {
+  background: #fff3e0;
+  border-right: 4px solid #e65100;
+  border-left: none;
+}
+#d4 .ccard-q {
+  color: #e65100;
+}
+#d4 .ccard-result {
+  color: #e65100;
+  border-top-color: #e6510055;
+}
+#d4 .ktbl th {
+  background: #e65100;
+}
+#d4 .ktbl tr:nth-child(even) td {
+  background: #fff3e0;
+}
+#d4 .ionic-card {
+  border-right: 4px solid #e65100;
+}
+#d4 .ionic-title {
+  color: #e65100;
+}
+#d4 .ionic-label {
+  background: #e65100;
+}
+#d4 .ionic-final {
+  background: #fff3e0;
+  color: #b84400;
+}
+#d4 .summary-box {
+  background: #fff3e0;
+  border: 1.5px solid #e6510044;
+  border-right: 5px solid #e65100;
+}
+#d4 .summary-box::before {
+  color: #e65100;
+}
+#d4 .summary-box ul li::before {
+  color: #e65100;
+}
+#d4 .summary-key {
+  color: #e65100;
+}
+#d4 .summary-formula {
+  background: #e65100;
+}
+#d4 .section-pill {
+  position: relative;
+}
+#d4 .divider-lesson {
+  background: linear-gradient(90deg, #e65100, transparent);
+}
+#d4 .quiz-toggle {
+  border-color: #e6510055;
+  color: #e65100;
+}
+#d4 .quiz-toggle.active {
+  background: #e65100;
+  color: white;
+  border-color: #e65100;
+}
+#d4 .score-banner {
+  background: #e65100;
+}
+#d4 .check-box {
+  border-color: #e6510088;
+}
+#d4 .lesson-check input:checked + .check-box {
+  background: #e65100;
+  border-color: #e65100;
+}
+#d4 .choice-btn.correct {
+  background: #fff3e0;
+  border-color: #e65100;
+  color: #b84400;
+}
+#d4 .toc-link-d4 {
+  background: #e65100;
+  color: white;
+  border-color: #e65100;
+}
+
+#d5 .lesson-num {
+  background: linear-gradient(135deg,#1565c0,#1976d2);
+  color: white;
+  box-shadow: 0 4px 12px rgba(21,101,192,.3);
+}
+#d5 .lesson-hdr {
+  border-bottom: 3px solid #1565c0;
+}
+#d5 .lesson-title {
+  color: #1565c0;
+}
+#d5 .mcq .mcq-num {
+  background: #1565c0;
+}
+#d5 .ans-dot {
+  background: linear-gradient(135deg,#1565c0,#1976d2);
+}
+#d5 .ans-text {
+  color: #0d47a1;
+}
+#d5 .wcard {
+  background: #e3f2fd;
+  border-right: 4px solid #1565c0;
+}
+#d5 .wcard-q {
+  color: #1565c0;
+}
+#d5 .wcard-a {
+  color: #0d47a1;
+}
+#d5 .step-dot {
+  background: #1565c0;
+}
+#d5 .ccard {
+  background: #e3f2fd;
+  border-right: 4px solid #1565c0;
+  border-left: none;
+}
+#d5 .ccard-q {
+  color: #1565c0;
+}
+#d5 .ccard-result {
+  color: #1565c0;
+  border-top-color: #1565c055;
+}
+#d5 .ktbl th {
+  background: #1565c0;
+}
+#d5 .ktbl tr:nth-child(even) td {
+  background: #e3f2fd;
+}
+#d5 .ionic-card {
+  border-right: 4px solid #1565c0;
+}
+#d5 .ionic-title {
+  color: #1565c0;
+}
+#d5 .ionic-label {
+  background: #1565c0;
+}
+#d5 .ionic-final {
+  background: #e3f2fd;
+  color: #0d47a1;
+}
+#d5 .summary-box {
+  background: #e3f2fd;
+  border: 1.5px solid #1565c044;
+  border-right: 5px solid #1565c0;
+}
+#d5 .summary-box::before {
+  color: #1565c0;
+}
+#d5 .summary-box ul li::before {
+  color: #1565c0;
+}
+#d5 .summary-key {
+  color: #1565c0;
+}
+#d5 .summary-formula {
+  background: #1565c0;
+}
+#d5 .section-pill {
+  position: relative;
+}
+#d5 .divider-lesson {
+  background: linear-gradient(90deg, #1565c0, transparent);
+}
+#d5 .quiz-toggle {
+  border-color: #1565c055;
+  color: #1565c0;
+}
+#d5 .quiz-toggle.active {
+  background: #1565c0;
+  color: white;
+  border-color: #1565c0;
+}
+#d5 .score-banner {
+  background: #1565c0;
+}
+#d5 .check-box {
+  border-color: #1565c088;
+}
+#d5 .lesson-check input:checked + .check-box {
+  background: #1565c0;
+  border-color: #1565c0;
+}
+#d5 .choice-btn.correct {
+  background: #e3f2fd;
+  border-color: #1565c0;
+  color: #0d47a1;
+}
+#d5 .toc-link-d5 {
+  background: #1565c0;
+  color: white;
+  border-color: #1565c0;
+}
+
+#d6 .lesson-num {
+  background: linear-gradient(135deg,#2e7d32,#388e3c);
+  color: white;
+  box-shadow: 0 4px 12px rgba(46,125,50,.3);
+}
+#d6 .lesson-hdr {
+  border-bottom: 3px solid #2e7d32;
+}
+#d6 .lesson-title {
+  color: #2e7d32;
+}
+#d6 .mcq .mcq-num {
+  background: #2e7d32;
+}
+#d6 .ans-dot {
+  background: linear-gradient(135deg,#2e7d32,#388e3c);
+}
+#d6 .ans-text {
+  color: #1b5e20;
+}
+#d6 .wcard {
+  background: #e8f5e9;
+  border-right: 4px solid #2e7d32;
+}
+#d6 .wcard-q {
+  color: #2e7d32;
+}
+#d6 .wcard-a {
+  color: #1b5e20;
+}
+#d6 .step-dot {
+  background: #2e7d32;
+}
+#d6 .ccard {
+  background: #e8f5e9;
+  border-right: 4px solid #2e7d32;
+  border-left: none;
+}
+#d6 .ccard-q {
+  color: #2e7d32;
+}
+#d6 .ccard-result {
+  color: #2e7d32;
+  border-top-color: #2e7d3255;
+}
+#d6 .ktbl th {
+  background: #2e7d32;
+}
+#d6 .ktbl tr:nth-child(even) td {
+  background: #e8f5e9;
+}
+#d6 .ionic-card {
+  border-right: 4px solid #2e7d32;
+}
+#d6 .ionic-title {
+  color: #2e7d32;
+}
+#d6 .ionic-label {
+  background: #2e7d32;
+}
+#d6 .ionic-final {
+  background: #e8f5e9;
+  color: #1b5e20;
+}
+#d6 .summary-box {
+  background: #e8f5e9;
+  border: 1.5px solid #2e7d3244;
+  border-right: 5px solid #2e7d32;
+}
+#d6 .summary-box::before {
+  color: #2e7d32;
+}
+#d6 .summary-box ul li::before {
+  color: #2e7d32;
+}
+#d6 .summary-key {
+  color: #2e7d32;
+}
+#d6 .summary-formula {
+  background: #2e7d32;
+}
+#d6 .section-pill {
+  position: relative;
+}
+#d6 .divider-lesson {
+  background: linear-gradient(90deg, #2e7d32, transparent);
+}
+#d6 .quiz-toggle {
+  border-color: #2e7d3255;
+  color: #2e7d32;
+}
+#d6 .quiz-toggle.active {
+  background: #2e7d32;
+  color: white;
+  border-color: #2e7d32;
+}
+#d6 .score-banner {
+  background: #2e7d32;
+}
+#d6 .check-box {
+  border-color: #2e7d3288;
+}
+#d6 .lesson-check input:checked + .check-box {
+  background: #2e7d32;
+  border-color: #2e7d32;
+}
+#d6 .choice-btn.correct {
+  background: #e8f5e9;
+  border-color: #2e7d32;
+  color: #1b5e20;
+}
+#d6 .toc-link-d6 {
+  background: #2e7d32;
+  color: white;
+  border-color: #2e7d32;
+}
+
+#d7 .lesson-num {
+  background: linear-gradient(135deg,#006064,#00838f);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,131,143,.3);
+}
+#d7 .lesson-hdr {
+  border-bottom: 3px solid #00838f;
+}
+#d7 .lesson-title {
+  color: #00838f;
+}
+#d7 .mcq .mcq-num {
+  background: #00838f;
+}
+#d7 .ans-dot {
+  background: linear-gradient(135deg,#006064,#00838f);
+}
+#d7 .ans-text {
+  color: #005662;
+}
+#d7 .wcard {
+  background: #e0f7fa;
+  border-right: 4px solid #00838f;
+}
+#d7 .wcard-q {
+  color: #00838f;
+}
+#d7 .wcard-a {
+  color: #005662;
+}
+#d7 .step-dot {
+  background: #00838f;
+}
+#d7 .ccard {
+  background: #e0f7fa;
+  border-right: 4px solid #00838f;
+  border-left: none;
+}
+#d7 .ccard-q {
+  color: #00838f;
+}
+#d7 .ccard-result {
+  color: #00838f;
+  border-top-color: #00838f55;
+}
+#d7 .ktbl th {
+  background: #00838f;
+}
+#d7 .ktbl tr:nth-child(even) td {
+  background: #e0f7fa;
+}
+#d7 .ionic-card {
+  border-right: 4px solid #00838f;
+}
+#d7 .ionic-title {
+  color: #00838f;
+}
+#d7 .ionic-label {
+  background: #00838f;
+}
+#d7 .ionic-final {
+  background: #e0f7fa;
+  color: #005662;
+}
+#d7 .summary-box {
+  background: #e0f7fa;
+  border: 1.5px solid #00838f44;
+  border-right: 5px solid #00838f;
+}
+#d7 .summary-box::before {
+  color: #00838f;
+}
+#d7 .summary-box ul li::before {
+  color: #00838f;
+}
+#d7 .summary-key {
+  color: #00838f;
+}
+#d7 .summary-formula {
+  background: #00838f;
+}
+#d7 .section-pill {
+  position: relative;
+}
+#d7 .divider-lesson {
+  background: linear-gradient(90deg, #00838f, transparent);
+}
+#d7 .quiz-toggle {
+  border-color: #00838f55;
+  color: #00838f;
+}
+#d7 .quiz-toggle.active {
+  background: #00838f;
+  color: white;
+  border-color: #00838f;
+}
+#d7 .score-banner {
+  background: #00838f;
+}
+#d7 .check-box {
+  border-color: #00838f88;
+}
+#d7 .lesson-check input:checked + .check-box {
+  background: #00838f;
+  border-color: #00838f;
+}
+#d7 .choice-btn.correct {
+  background: #e0f7fa;
+  border-color: #00838f;
+  color: #005662;
+}
+#d7 .toc-link-d7 {
+  background: #00838f;
+  color: white;
+  border-color: #00838f;
+}
+
+#d8 .lesson-num {
+  background: linear-gradient(135deg,#ad1457,#c2185b);
+  color: white;
+  box-shadow: 0 4px 12px rgba(173,20,87,.3);
+}
+#d8 .lesson-hdr {
+  border-bottom: 3px solid #ad1457;
+}
+#d8 .lesson-title {
+  color: #ad1457;
+}
+#d8 .mcq .mcq-num {
+  background: #ad1457;
+}
+#d8 .ans-dot {
+  background: linear-gradient(135deg,#ad1457,#c2185b);
+}
+#d8 .ans-text {
+  color: #880e4f;
+}
+#d8 .wcard {
+  background: #fce4ec;
+  border-right: 4px solid #ad1457;
+}
+#d8 .wcard-q {
+  color: #ad1457;
+}
+#d8 .wcard-a {
+  color: #880e4f;
+}
+#d8 .step-dot {
+  background: #ad1457;
+}
+#d8 .ccard {
+  background: #fce4ec;
+  border-right: 4px solid #ad1457;
+  border-left: none;
+}
+#d8 .ccard-q {
+  color: #ad1457;
+}
+#d8 .ccard-result {
+  color: #ad1457;
+  border-top-color: #ad145755;
+}
+#d8 .ktbl th {
+  background: #ad1457;
+}
+#d8 .ktbl tr:nth-child(even) td {
+  background: #fce4ec;
+}
+#d8 .ionic-card {
+  border-right: 4px solid #ad1457;
+}
+#d8 .ionic-title {
+  color: #ad1457;
+}
+#d8 .ionic-label {
+  background: #ad1457;
+}
+#d8 .ionic-final {
+  background: #fce4ec;
+  color: #880e4f;
+}
+#d8 .summary-box {
+  background: #fce4ec;
+  border: 1.5px solid #ad145744;
+  border-right: 5px solid #ad1457;
+}
+#d8 .summary-box::before {
+  color: #ad1457;
+}
+#d8 .summary-box ul li::before {
+  color: #ad1457;
+}
+#d8 .summary-key {
+  color: #ad1457;
+}
+#d8 .summary-formula {
+  background: #ad1457;
+}
+#d8 .section-pill {
+  position: relative;
+}
+#d8 .divider-lesson {
+  background: linear-gradient(90deg, #ad1457, transparent);
+}
+#d8 .quiz-toggle {
+  border-color: #ad145755;
+  color: #ad1457;
+}
+#d8 .quiz-toggle.active {
+  background: #ad1457;
+  color: white;
+  border-color: #ad1457;
+}
+#d8 .score-banner {
+  background: #ad1457;
+}
+#d8 .check-box {
+  border-color: #ad145788;
+}
+#d8 .lesson-check input:checked + .check-box {
+  background: #ad1457;
+  border-color: #ad1457;
+}
+#d8 .choice-btn.correct {
+  background: #fce4ec;
+  border-color: #ad1457;
+  color: #880e4f;
+}
+#d8 .toc-link-d8 {
+  background: #ad1457;
+  color: white;
+  border-color: #ad1457;
+}
+
+#d9 .lesson-num {
+  background: linear-gradient(135deg,#4527a0,#512da8);
+  color: white;
+  box-shadow: 0 4px 12px rgba(69,39,160,.3);
+}
+#d9 .lesson-hdr {
+  border-bottom: 3px solid #4527a0;
+}
+#d9 .lesson-title {
+  color: #4527a0;
+}
+#d9 .mcq .mcq-num {
+  background: #4527a0;
+}
+#d9 .ans-dot {
+  background: linear-gradient(135deg,#4527a0,#512da8);
+}
+#d9 .ans-text {
+  color: #311b92;
+}
+#d9 .wcard {
+  background: #ede7f6;
+  border-right: 4px solid #4527a0;
+}
+#d9 .wcard-q {
+  color: #4527a0;
+}
+#d9 .wcard-a {
+  color: #311b92;
+}
+#d9 .step-dot {
+  background: #4527a0;
+}
+#d9 .ccard {
+  background: #ede7f6;
+  border-right: 4px solid #4527a0;
+  border-left: none;
+}
+#d9 .ccard-q {
+  color: #4527a0;
+}
+#d9 .ccard-result {
+  color: #4527a0;
+  border-top-color: #4527a055;
+}
+#d9 .ktbl th {
+  background: #4527a0;
+}
+#d9 .ktbl tr:nth-child(even) td {
+  background: #ede7f6;
+}
+#d9 .ionic-card {
+  border-right: 4px solid #4527a0;
+}
+#d9 .ionic-title {
+  color: #4527a0;
+}
+#d9 .ionic-label {
+  background: #4527a0;
+}
+#d9 .ionic-final {
+  background: #ede7f6;
+  color: #311b92;
+}
+#d9 .summary-box {
+  background: #ede7f6;
+  border: 1.5px solid #4527a044;
+  border-right: 5px solid #4527a0;
+}
+#d9 .summary-box::before {
+  color: #4527a0;
+}
+#d9 .summary-box ul li::before {
+  color: #4527a0;
+}
+#d9 .summary-key {
+  color: #4527a0;
+}
+#d9 .summary-formula {
+  background: #4527a0;
+}
+#d9 .section-pill {
+  position: relative;
+}
+#d9 .divider-lesson {
+  background: linear-gradient(90deg, #4527a0, transparent);
+}
+#d9 .quiz-toggle {
+  border-color: #4527a055;
+  color: #4527a0;
+}
+#d9 .quiz-toggle.active {
+  background: #4527a0;
+  color: white;
+  border-color: #4527a0;
+}
+#d9 .score-banner {
+  background: #4527a0;
+}
+#d9 .check-box {
+  border-color: #4527a088;
+}
+#d9 .lesson-check input:checked + .check-box {
+  background: #4527a0;
+  border-color: #4527a0;
+}
+#d9 .choice-btn.correct {
+  background: #ede7f6;
+  border-color: #4527a0;
+  color: #311b92;
+}
+#d9 .toc-link-d9 {
+  background: #4527a0;
+  color: white;
+  border-color: #4527a0;
+}
+
+#d10 .lesson-num {
+  background: linear-gradient(135deg,#004d40,#00695c);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,105,92,.3);
+}
+#d10 .lesson-hdr {
+  border-bottom: 3px solid #00695c;
+}
+#d10 .lesson-title {
+  color: #00695c;
+}
+#d10 .mcq .mcq-num {
+  background: #00695c;
+}
+#d10 .ans-dot {
+  background: linear-gradient(135deg,#004d40,#00695c);
+}
+#d10 .ans-text {
+  color: #004d40;
+}
+#d10 .wcard {
+  background: #e0f2f1;
+  border-right: 4px solid #00695c;
+}
+#d10 .wcard-q {
+  color: #00695c;
+}
+#d10 .wcard-a {
+  color: #004d40;
+}
+#d10 .step-dot {
+  background: #00695c;
+}
+#d10 .ccard {
+  background: #e0f2f1;
+  border-right: 4px solid #00695c;
+  border-left: none;
+}
+#d10 .ccard-q {
+  color: #00695c;
+}
+#d10 .ccard-result {
+  color: #00695c;
+  border-top-color: #00695c55;
+}
+#d10 .ktbl th {
+  background: #00695c;
+}
+#d10 .ktbl tr:nth-child(even) td {
+  background: #e0f2f1;
+}
+#d10 .ionic-card {
+  border-right: 4px solid #00695c;
+}
+#d10 .ionic-title {
+  color: #00695c;
+}
+#d10 .ionic-label {
+  background: #00695c;
+}
+#d10 .ionic-final {
+  background: #e0f2f1;
+  color: #004d40;
+}
+#d10 .summary-box {
+  background: #e0f2f1;
+  border: 1.5px solid #00695c44;
+  border-right: 5px solid #00695c;
+}
+#d10 .summary-box::before {
+  color: #00695c;
+}
+#d10 .summary-box ul li::before {
+  color: #00695c;
+}
+#d10 .summary-key {
+  color: #00695c;
+}
+#d10 .summary-formula {
+  background: #00695c;
+}
+#d10 .section-pill {
+  position: relative;
+}
+#d10 .divider-lesson {
+  background: linear-gradient(90deg, #00695c, transparent);
+}
+#d10 .quiz-toggle {
+  border-color: #00695c55;
+  color: #00695c;
+}
+#d10 .quiz-toggle.active {
+  background: #00695c;
+  color: white;
+  border-color: #00695c;
+}
+#d10 .score-banner {
+  background: #00695c;
+}
+#d10 .check-box {
+  border-color: #00695c88;
+}
+#d10 .lesson-check input:checked + .check-box {
+  background: #00695c;
+  border-color: #00695c;
+}
+#d10 .choice-btn.correct {
+  background: #e0f2f1;
+  border-color: #00695c;
+  color: #004d40;
+}
+#d10 .toc-link-d10 {
+  background: #00695c;
+  color: white;
+  border-color: #00695c;
+}
+
+#d11 .lesson-num {
+  background: linear-gradient(135deg,#4e342e,#6d4c41);
+  color: white;
+  box-shadow: 0 4px 12px rgba(109,76,65,.3);
+}
+#d11 .lesson-hdr {
+  border-bottom: 3px solid #6d4c41;
+}
+#d11 .lesson-title {
+  color: #6d4c41;
+}
+#d11 .mcq .mcq-num {
+  background: #6d4c41;
+}
+#d11 .ans-dot {
+  background: linear-gradient(135deg,#4e342e,#6d4c41);
+}
+#d11 .ans-text {
+  color: #4e342e;
+}
+#d11 .wcard {
+  background: #efebe9;
+  border-right: 4px solid #6d4c41;
+}
+#d11 .wcard-q {
+  color: #6d4c41;
+}
+#d11 .wcard-a {
+  color: #4e342e;
+}
+#d11 .step-dot {
+  background: #6d4c41;
+}
+#d11 .ccard {
+  background: #efebe9;
+  border-right: 4px solid #6d4c41;
+  border-left: none;
+}
+#d11 .ccard-q {
+  color: #6d4c41;
+}
+#d11 .ccard-result {
+  color: #6d4c41;
+  border-top-color: #6d4c4155;
+}
+#d11 .ktbl th {
+  background: #6d4c41;
+}
+#d11 .ktbl tr:nth-child(even) td {
+  background: #efebe9;
+}
+#d11 .ionic-card {
+  border-right: 4px solid #6d4c41;
+}
+#d11 .ionic-title {
+  color: #6d4c41;
+}
+#d11 .ionic-label {
+  background: #6d4c41;
+}
+#d11 .ionic-final {
+  background: #efebe9;
+  color: #4e342e;
+}
+#d11 .summary-box {
+  background: #efebe9;
+  border: 1.5px solid #6d4c4144;
+  border-right: 5px solid #6d4c41;
+}
+#d11 .summary-box::before {
+  color: #6d4c41;
+}
+#d11 .summary-box ul li::before {
+  color: #6d4c41;
+}
+#d11 .summary-key {
+  color: #6d4c41;
+}
+#d11 .summary-formula {
+  background: #6d4c41;
+}
+#d11 .section-pill {
+  position: relative;
+}
+#d11 .divider-lesson {
+  background: linear-gradient(90deg, #6d4c41, transparent);
+}
+#d11 .quiz-toggle {
+  border-color: #6d4c4155;
+  color: #6d4c41;
+}
+#d11 .quiz-toggle.active {
+  background: #6d4c41;
+  color: white;
+  border-color: #6d4c41;
+}
+#d11 .score-banner {
+  background: #6d4c41;
+}
+#d11 .check-box {
+  border-color: #6d4c4188;
+}
+#d11 .lesson-check input:checked + .check-box {
+  background: #6d4c41;
+  border-color: #6d4c41;
+}
+#d11 .choice-btn.correct {
+  background: #efebe9;
+  border-color: #6d4c41;
+  color: #4e342e;
+}
+#d11 .toc-link-d11 {
+  background: #6d4c41;
+  color: white;
+  border-color: #6d4c41;
+}
+
+#d12 .lesson-num {
+  background: linear-gradient(135deg,#1a237e,#283593);
+  color: white;
+  box-shadow: 0 4px 12px rgba(40,53,147,.3);
+}
+#d12 .lesson-hdr {
+  border-bottom: 3px solid #283593;
+}
+#d12 .lesson-title {
+  color: #283593;
+}
+#d12 .mcq .mcq-num {
+  background: #283593;
+}
+#d12 .ans-dot {
+  background: linear-gradient(135deg,#1a237e,#283593);
+}
+#d12 .ans-text {
+  color: #1a237e;
+}
+#d12 .wcard {
+  background: #e8eaf6;
+  border-right: 4px solid #283593;
+}
+#d12 .wcard-q {
+  color: #283593;
+}
+#d12 .wcard-a {
+  color: #1a237e;
+}
+#d12 .step-dot {
+  background: #283593;
+}
+#d12 .ccard {
+  background: #e8eaf6;
+  border-right: 4px solid #283593;
+  border-left: none;
+}
+#d12 .ccard-q {
+  color: #283593;
+}
+#d12 .ccard-result {
+  color: #283593;
+  border-top-color: #28359355;
+}
+#d12 .ktbl th {
+  background: #283593;
+}
+#d12 .ktbl tr:nth-child(even) td {
+  background: #e8eaf6;
+}
+#d12 .ionic-card {
+  border-right: 4px solid #283593;
+}
+#d12 .ionic-title {
+  color: #283593;
+}
+#d12 .ionic-label {
+  background: #283593;
+}
+#d12 .ionic-final {
+  background: #e8eaf6;
+  color: #1a237e;
+}
+#d12 .summary-box {
+  background: #e8eaf6;
+  border: 1.5px solid #28359344;
+  border-right: 5px solid #283593;
+}
+#d12 .summary-box::before {
+  color: #283593;
+}
+#d12 .summary-box ul li::before {
+  color: #283593;
+}
+#d12 .summary-key {
+  color: #283593;
+}
+#d12 .summary-formula {
+  background: #283593;
+}
+#d12 .section-pill {
+  position: relative;
+}
+#d12 .divider-lesson {
+  background: linear-gradient(90deg, #283593, transparent);
+}
+#d12 .quiz-toggle {
+  border-color: #28359355;
+  color: #283593;
+}
+#d12 .quiz-toggle.active {
+  background: #283593;
+  color: white;
+  border-color: #283593;
+}
+#d12 .score-banner {
+  background: #283593;
+}
+#d12 .check-box {
+  border-color: #28359388;
+}
+#d12 .lesson-check input:checked + .check-box {
+  background: #283593;
+  border-color: #283593;
+}
+#d12 .choice-btn.correct {
+  background: #e8eaf6;
+  border-color: #283593;
+  color: #1a237e;
+}
+#d12 .toc-link-d12 {
+  background: #283593;
+  color: white;
+  border-color: #283593;
+}
+
+#d13 .lesson-num {
+  background: linear-gradient(135deg,#33691e,#558b2f);
+  color: white;
+  box-shadow: 0 4px 12px rgba(85,139,47,.3);
+}
+#d13 .lesson-hdr {
+  border-bottom: 3px solid #558b2f;
+}
+#d13 .lesson-title {
+  color: #558b2f;
+}
+#d13 .mcq .mcq-num {
+  background: #558b2f;
+}
+#d13 .ans-dot {
+  background: linear-gradient(135deg,#33691e,#558b2f);
+}
+#d13 .ans-text {
+  color: #33691e;
+}
+#d13 .wcard {
+  background: #f1f8e9;
+  border-right: 4px solid #558b2f;
+}
+#d13 .wcard-q {
+  color: #558b2f;
+}
+#d13 .wcard-a {
+  color: #33691e;
+}
+#d13 .step-dot {
+  background: #558b2f;
+}
+#d13 .ccard {
+  background: #f1f8e9;
+  border-right: 4px solid #558b2f;
+  border-left: none;
+}
+#d13 .ccard-q {
+  color: #558b2f;
+}
+#d13 .ccard-result {
+  color: #558b2f;
+  border-top-color: #558b2f55;
+}
+#d13 .ktbl th {
+  background: #558b2f;
+}
+#d13 .ktbl tr:nth-child(even) td {
+  background: #f1f8e9;
+}
+#d13 .ionic-card {
+  border-right: 4px solid #558b2f;
+}
+#d13 .ionic-title {
+  color: #558b2f;
+}
+#d13 .ionic-label {
+  background: #558b2f;
+}
+#d13 .ionic-final {
+  background: #f1f8e9;
+  color: #33691e;
+}
+#d13 .summary-box {
+  background: #f1f8e9;
+  border: 1.5px solid #558b2f44;
+  border-right: 5px solid #558b2f;
+}
+#d13 .summary-box::before {
+  color: #558b2f;
+}
+#d13 .summary-box ul li::before {
+  color: #558b2f;
+}
+#d13 .summary-key {
+  color: #558b2f;
+}
+#d13 .summary-formula {
+  background: #558b2f;
+}
+#d13 .section-pill {
+  position: relative;
+}
+#d13 .divider-lesson {
+  background: linear-gradient(90deg, #558b2f, transparent);
+}
+#d13 .quiz-toggle {
+  border-color: #558b2f55;
+  color: #558b2f;
+}
+#d13 .quiz-toggle.active {
+  background: #558b2f;
+  color: white;
+  border-color: #558b2f;
+}
+#d13 .score-banner {
+  background: #558b2f;
+}
+#d13 .check-box {
+  border-color: #558b2f88;
+}
+#d13 .lesson-check input:checked + .check-box {
+  background: #558b2f;
+  border-color: #558b2f;
+}
+#d13 .choice-btn.correct {
+  background: #f1f8e9;
+  border-color: #558b2f;
+  color: #33691e;
+}
+#d13 .toc-link-d13 {
+  background: #558b2f;
+  color: white;
+  border-color: #558b2f;
+}
+
+#d14 .lesson-num {
+  background: linear-gradient(135deg,#263238,#37474f);
+  color: white;
+  box-shadow: 0 4px 12px rgba(55,71,79,.3);
+}
+#d14 .lesson-hdr {
+  border-bottom: 3px solid #37474f;
+}
+#d14 .lesson-title {
+  color: #37474f;
+}
+#d14 .mcq .mcq-num {
+  background: #37474f;
+}
+#d14 .ans-dot {
+  background: linear-gradient(135deg,#263238,#37474f);
+}
+#d14 .ans-text {
+  color: #263238;
+}
+#d14 .wcard {
+  background: #eceff1;
+  border-right: 4px solid #37474f;
+}
+#d14 .wcard-q {
+  color: #37474f;
+}
+#d14 .wcard-a {
+  color: #263238;
+}
+#d14 .step-dot {
+  background: #37474f;
+}
+#d14 .ccard {
+  background: #eceff1;
+  border-right: 4px solid #37474f;
+  border-left: none;
+}
+#d14 .ccard-q {
+  color: #37474f;
+}
+#d14 .ccard-result {
+  color: #37474f;
+  border-top-color: #37474f55;
+}
+#d14 .ktbl th {
+  background: #37474f;
+}
+#d14 .ktbl tr:nth-child(even) td {
+  background: #eceff1;
+}
+#d14 .ionic-card {
+  border-right: 4px solid #37474f;
+}
+#d14 .ionic-title {
+  color: #37474f;
+}
+#d14 .ionic-label {
+  background: #37474f;
+}
+#d14 .ionic-final {
+  background: #eceff1;
+  color: #263238;
+}
+#d14 .summary-box {
+  background: #eceff1;
+  border: 1.5px solid #37474f44;
+  border-right: 5px solid #37474f;
+}
+#d14 .summary-box::before {
+  color: #37474f;
+}
+#d14 .summary-box ul li::before {
+  color: #37474f;
+}
+#d14 .summary-key {
+  color: #37474f;
+}
+#d14 .summary-formula {
+  background: #37474f;
+}
+#d14 .section-pill {
+  position: relative;
+}
+#d14 .divider-lesson {
+  background: linear-gradient(90deg, #37474f, transparent);
+}
+#d14 .quiz-toggle {
+  border-color: #37474f55;
+  color: #37474f;
+}
+#d14 .quiz-toggle.active {
+  background: #37474f;
+  color: white;
+  border-color: #37474f;
+}
+#d14 .score-banner {
+  background: #37474f;
+}
+#d14 .check-box {
+  border-color: #37474f88;
+}
+#d14 .lesson-check input:checked + .check-box {
+  background: #37474f;
+  border-color: #37474f;
+}
+#d14 .choice-btn.correct {
+  background: #eceff1;
+  border-color: #37474f;
+  color: #263238;
+}
+#d14 .toc-link-d14 {
+  background: #37474f;
+  color: white;
+  border-color: #37474f;
+}
+
+#d15 .lesson-num {
+  background: linear-gradient(135deg,#01579b,#0277bd);
+  color: white;
+  box-shadow: 0 4px 12px rgba(2,119,189,.3);
+}
+#d15 .lesson-hdr {
+  border-bottom: 3px solid #0277bd;
+}
+#d15 .lesson-title {
+  color: #0277bd;
+}
+#d15 .mcq .mcq-num {
+  background: #0277bd;
+}
+#d15 .ans-dot {
+  background: linear-gradient(135deg,#01579b,#0277bd);
+}
+#d15 .ans-text {
+  color: #01579b;
+}
+#d15 .wcard {
+  background: #e1f5fe;
+  border-right: 4px solid #0277bd;
+}
+#d15 .wcard-q {
+  color: #0277bd;
+}
+#d15 .wcard-a {
+  color: #01579b;
+}
+#d15 .step-dot {
+  background: #0277bd;
+}
+#d15 .ccard {
+  background: #e1f5fe;
+  border-right: 4px solid #0277bd;
+  border-left: none;
+}
+#d15 .ccard-q {
+  color: #0277bd;
+}
+#d15 .ccard-result {
+  color: #0277bd;
+  border-top-color: #0277bd55;
+}
+#d15 .ktbl th {
+  background: #0277bd;
+}
+#d15 .ktbl tr:nth-child(even) td {
+  background: #e1f5fe;
+}
+#d15 .ionic-card {
+  border-right: 4px solid #0277bd;
+}
+#d15 .ionic-title {
+  color: #0277bd;
+}
+#d15 .ionic-label {
+  background: #0277bd;
+}
+#d15 .ionic-final {
+  background: #e1f5fe;
+  color: #01579b;
+}
+#d15 .summary-box {
+  background: #e1f5fe;
+  border: 1.5px solid #0277bd44;
+  border-right: 5px solid #0277bd;
+}
+#d15 .summary-box::before {
+  color: #0277bd;
+}
+#d15 .summary-box ul li::before {
+  color: #0277bd;
+}
+#d15 .summary-key {
+  color: #0277bd;
+}
+#d15 .summary-formula {
+  background: #0277bd;
+}
+#d15 .section-pill {
+  position: relative;
+}
+#d15 .divider-lesson {
+  background: linear-gradient(90deg, #0277bd, transparent);
+}
+#d15 .quiz-toggle {
+  border-color: #0277bd55;
+  color: #0277bd;
+}
+#d15 .quiz-toggle.active {
+  background: #0277bd;
+  color: white;
+  border-color: #0277bd;
+}
+#d15 .score-banner {
+  background: #0277bd;
+}
+#d15 .check-box {
+  border-color: #0277bd88;
+}
+#d15 .lesson-check input:checked + .check-box {
+  background: #0277bd;
+  border-color: #0277bd;
+}
+#d15 .choice-btn.correct {
+  background: #e1f5fe;
+  border-color: #0277bd;
+  color: #01579b;
+}
+#d15 .toc-link-d15 {
+  background: #0277bd;
+  color: white;
+  border-color: #0277bd;
+}
+
+#d16 .lesson-num {
+  background: linear-gradient(135deg,#9a7000,#c6a000);
+  color: white;
+  box-shadow: 0 4px 12px rgba(198,160,0,.3);
+}
+#d16 .lesson-hdr {
+  border-bottom: 3px solid #c6a000;
+}
+#d16 .lesson-title {
+  color: #c6a000;
+}
+#d16 .mcq .mcq-num {
+  background: #c6a000;
+}
+#d16 .ans-dot {
+  background: linear-gradient(135deg,#9a7000,#c6a000);
+}
+#d16 .ans-text {
+  color: #9a7000;
+}
+#d16 .wcard {
+  background: #fffde7;
+  border-right: 4px solid #c6a000;
+}
+#d16 .wcard-q {
+  color: #c6a000;
+}
+#d16 .wcard-a {
+  color: #9a7000;
+}
+#d16 .step-dot {
+  background: #c6a000;
+}
+#d16 .ccard {
+  background: #fffde7;
+  border-right: 4px solid #c6a000;
+  border-left: none;
+}
+#d16 .ccard-q {
+  color: #c6a000;
+}
+#d16 .ccard-result {
+  color: #c6a000;
+  border-top-color: #c6a00055;
+}
+#d16 .ktbl th {
+  background: #c6a000;
+}
+#d16 .ktbl tr:nth-child(even) td {
+  background: #fffde7;
+}
+#d16 .ionic-card {
+  border-right: 4px solid #c6a000;
+}
+#d16 .ionic-title {
+  color: #c6a000;
+}
+#d16 .ionic-label {
+  background: #c6a000;
+}
+#d16 .ionic-final {
+  background: #fffde7;
+  color: #9a7000;
+}
+#d16 .summary-box {
+  background: #fffde7;
+  border: 1.5px solid #c6a00044;
+  border-right: 5px solid #c6a000;
+}
+#d16 .summary-box::before {
+  color: #c6a000;
+}
+#d16 .summary-box ul li::before {
+  color: #c6a000;
+}
+#d16 .summary-key {
+  color: #c6a000;
+}
+#d16 .summary-formula {
+  background: #c6a000;
+}
+#d16 .section-pill {
+  position: relative;
+}
+#d16 .divider-lesson {
+  background: linear-gradient(90deg, #c6a000, transparent);
+}
+#d16 .quiz-toggle {
+  border-color: #c6a00055;
+  color: #c6a000;
+}
+#d16 .quiz-toggle.active {
+  background: #c6a000;
+  color: white;
+  border-color: #c6a000;
+}
+#d16 .score-banner {
+  background: #c6a000;
+}
+#d16 .check-box {
+  border-color: #c6a00088;
+}
+#d16 .lesson-check input:checked + .check-box {
+  background: #c6a000;
+  border-color: #c6a000;
+}
+#d16 .choice-btn.correct {
+  background: #fffde7;
+  border-color: #c6a000;
+  color: #9a7000;
+}
+#d16 .toc-link-d16 {
+  background: #c6a000;
+  color: white;
+  border-color: #c6a000;
+}
+
+#d17 .lesson-num {
+  background: linear-gradient(135deg,#bf360c,#d84315);
+  color: white;
+  box-shadow: 0 4px 12px rgba(216,67,21,.3);
+}
+#d17 .lesson-hdr {
+  border-bottom: 3px solid #d84315;
+}
+#d17 .lesson-title {
+  color: #d84315;
+}
+#d17 .mcq .mcq-num {
+  background: #d84315;
+}
+#d17 .ans-dot {
+  background: linear-gradient(135deg,#bf360c,#d84315);
+}
+#d17 .ans-text {
+  color: #bf360c;
+}
+#d17 .wcard {
+  background: #fbe9e7;
+  border-right: 4px solid #d84315;
+}
+#d17 .wcard-q {
+  color: #d84315;
+}
+#d17 .wcard-a {
+  color: #bf360c;
+}
+#d17 .step-dot {
+  background: #d84315;
+}
+#d17 .ccard {
+  background: #fbe9e7;
+  border-right: 4px solid #d84315;
+  border-left: none;
+}
+#d17 .ccard-q {
+  color: #d84315;
+}
+#d17 .ccard-result {
+  color: #d84315;
+  border-top-color: #d8431555;
+}
+#d17 .ktbl th {
+  background: #d84315;
+}
+#d17 .ktbl tr:nth-child(even) td {
+  background: #fbe9e7;
+}
+#d17 .ionic-card {
+  border-right: 4px solid #d84315;
+}
+#d17 .ionic-title {
+  color: #d84315;
+}
+#d17 .ionic-label {
+  background: #d84315;
+}
+#d17 .ionic-final {
+  background: #fbe9e7;
+  color: #bf360c;
+}
+#d17 .summary-box {
+  background: #fbe9e7;
+  border: 1.5px solid #d8431544;
+  border-right: 5px solid #d84315;
+}
+#d17 .summary-box::before {
+  color: #d84315;
+}
+#d17 .summary-box ul li::before {
+  color: #d84315;
+}
+#d17 .summary-key {
+  color: #d84315;
+}
+#d17 .summary-formula {
+  background: #d84315;
+}
+#d17 .section-pill {
+  position: relative;
+}
+#d17 .divider-lesson {
+  background: linear-gradient(90deg, #d84315, transparent);
+}
+#d17 .quiz-toggle {
+  border-color: #d8431555;
+  color: #d84315;
+}
+#d17 .quiz-toggle.active {
+  background: #d84315;
+  color: white;
+  border-color: #d84315;
+}
+#d17 .score-banner {
+  background: #d84315;
+}
+#d17 .check-box {
+  border-color: #d8431588;
+}
+#d17 .lesson-check input:checked + .check-box {
+  background: #d84315;
+  border-color: #d84315;
+}
+#d17 .choice-btn.correct {
+  background: #fbe9e7;
+  border-color: #d84315;
+  color: #bf360c;
+}
+#d17 .toc-link-d17 {
+  background: #d84315;
+  color: white;
+  border-color: #d84315;
+}
+
+#d18 .lesson-num {
+  background: linear-gradient(135deg,#0d6b3e,#1a9a5c);
+  color: white;
+  box-shadow: 0 4px 12px rgba(26,154,92,.3);
+}
+#d18 .lesson-hdr {
+  border-bottom: 3px solid #1a9a5c;
+}
+#d18 .lesson-title {
+  color: #1a9a5c;
+}
+#d18 .mcq .mcq-num {
+  background: #1a9a5c;
+}
+#d18 .ans-dot {
+  background: linear-gradient(135deg,#0d6b3e,#1a9a5c);
+}
+#d18 .ans-text {
+  color: #0d6b3e;
+}
+#d18 .wcard {
+  background: #edfaf3;
+  border-right: 4px solid #1a9a5c;
+}
+#d18 .wcard-q {
+  color: #1a9a5c;
+}
+#d18 .wcard-a {
+  color: #0d6b3e;
+}
+#d18 .step-dot {
+  background: #1a9a5c;
+}
+#d18 .ccard {
+  background: #edfaf3;
+  border-right: 4px solid #1a9a5c;
+  border-left: none;
+}
+#d18 .ccard-q {
+  color: #1a9a5c;
+}
+#d18 .ccard-result {
+  color: #1a9a5c;
+  border-top-color: #1a9a5c55;
+}
+#d18 .ktbl th {
+  background: #1a9a5c;
+}
+#d18 .ktbl tr:nth-child(even) td {
+  background: #edfaf3;
+}
+#d18 .ionic-card {
+  border-right: 4px solid #1a9a5c;
+}
+#d18 .ionic-title {
+  color: #1a9a5c;
+}
+#d18 .ionic-label {
+  background: #1a9a5c;
+}
+#d18 .ionic-final {
+  background: #edfaf3;
+  color: #0d6b3e;
+}
+#d18 .summary-box {
+  background: #edfaf3;
+  border: 1.5px solid #1a9a5c44;
+  border-right: 5px solid #1a9a5c;
+}
+#d18 .summary-box::before {
+  color: #1a9a5c;
+}
+#d18 .summary-box ul li::before {
+  color: #1a9a5c;
+}
+#d18 .summary-key {
+  color: #1a9a5c;
+}
+#d18 .summary-formula {
+  background: #1a9a5c;
+}
+#d18 .section-pill {
+  position: relative;
+}
+#d18 .divider-lesson {
+  background: linear-gradient(90deg, #1a9a5c, transparent);
+}
+#d18 .quiz-toggle {
+  border-color: #1a9a5c55;
+  color: #1a9a5c;
+}
+#d18 .quiz-toggle.active {
+  background: #1a9a5c;
+  color: white;
+  border-color: #1a9a5c;
+}
+#d18 .score-banner {
+  background: #1a9a5c;
+}
+#d18 .check-box {
+  border-color: #1a9a5c88;
+}
+#d18 .lesson-check input:checked + .check-box {
+  background: #1a9a5c;
+  border-color: #1a9a5c;
+}
+#d18 .choice-btn.correct {
+  background: #edfaf3;
+  border-color: #1a9a5c;
+  color: #0d6b3e;
+}
+#d18 .toc-link-d18 {
+  background: #1a9a5c;
+  color: white;
+  border-color: #1a9a5c;
+}
+
+/* ══ COLORED TOC BUTTONS ══ */
+.toc-d1 { background: #0f3460 !important; color: white !important; border-color: #0f3460 !important; }
+.toc-d2 { background: #7b2d8b !important; color: white !important; border-color: #7b2d8b !important; }
+.toc-d3 { background: #c62828 !important; color: white !important; border-color: #c62828 !important; }
+.toc-d4 { background: #e65100 !important; color: white !important; border-color: #e65100 !important; }
+.toc-d5 { background: #1565c0 !important; color: white !important; border-color: #1565c0 !important; }
+.toc-d6 { background: #2e7d32 !important; color: white !important; border-color: #2e7d32 !important; }
+.toc-d7 { background: #00838f !important; color: white !important; border-color: #00838f !important; }
+.toc-d8 { background: #ad1457 !important; color: white !important; border-color: #ad1457 !important; }
+.toc-d9 { background: #4527a0 !important; color: white !important; border-color: #4527a0 !important; }
+.toc-d10 { background: #00695c !important; color: white !important; border-color: #00695c !important; }
+.toc-d11 { background: #6d4c41 !important; color: white !important; border-color: #6d4c41 !important; }
+.toc-d12 { background: #283593 !important; color: white !important; border-color: #283593 !important; }
+.toc-d13 { background: #558b2f !important; color: white !important; border-color: #558b2f !important; }
+.toc-d14 { background: #37474f !important; color: white !important; border-color: #37474f !important; }
+.toc-d15 { background: #0277bd !important; color: white !important; border-color: #0277bd !important; }
+.toc-d16 { background: #c6a000 !important; color: white !important; border-color: #c6a000 !important; }
+.toc-d17 { background: #d84315 !important; color: white !important; border-color: #d84315 !important; }
+.toc-d18 { background: #1a9a5c !important; color: white !important; border-color: #1a9a5c !important; }
+
+/* ══ DARK MODE LESSON ADJUSTMENTS ══ */
+
+body.dark #d1 .mcq { background: #1e293b; }
+body.dark #d1 .wcard, body.dark #d1 .ccard { background: #1a2030; }
+body.dark #d1 .ionic-card { background: #1a2030; }
+
+body.dark #d2 .mcq { background: #1e293b; }
+body.dark #d2 .wcard, body.dark #d2 .ccard { background: #1a2030; }
+body.dark #d2 .ionic-card { background: #1a2030; }
+
+body.dark #d3 .mcq { background: #1e293b; }
+body.dark #d3 .wcard, body.dark #d3 .ccard { background: #1a2030; }
+body.dark #d3 .ionic-card { background: #1a2030; }
+
+body.dark #d4 .mcq { background: #1e293b; }
+body.dark #d4 .wcard, body.dark #d4 .ccard { background: #1a2030; }
+body.dark #d4 .ionic-card { background: #1a2030; }
+
+body.dark #d5 .mcq { background: #1e293b; }
+body.dark #d5 .wcard, body.dark #d5 .ccard { background: #1a2030; }
+body.dark #d5 .ionic-card { background: #1a2030; }
+
+body.dark #d6 .mcq { background: #1e293b; }
+body.dark #d6 .wcard, body.dark #d6 .ccard { background: #1a2030; }
+body.dark #d6 .ionic-card { background: #1a2030; }
+
+body.dark #d7 .mcq { background: #1e293b; }
+body.dark #d7 .wcard, body.dark #d7 .ccard { background: #1a2030; }
+body.dark #d7 .ionic-card { background: #1a2030; }
+
+body.dark #d8 .mcq { background: #1e293b; }
+body.dark #d8 .wcard, body.dark #d8 .ccard { background: #1a2030; }
+body.dark #d8 .ionic-card { background: #1a2030; }
+
+body.dark #d9 .mcq { background: #1e293b; }
+body.dark #d9 .wcard, body.dark #d9 .ccard { background: #1a2030; }
+body.dark #d9 .ionic-card { background: #1a2030; }
+
+body.dark #d10 .mcq { background: #1e293b; }
+body.dark #d10 .wcard, body.dark #d10 .ccard { background: #1a2030; }
+body.dark #d10 .ionic-card { background: #1a2030; }
+
+body.dark #d11 .mcq { background: #1e293b; }
+body.dark #d11 .wcard, body.dark #d11 .ccard { background: #1a2030; }
+body.dark #d11 .ionic-card { background: #1a2030; }
+
+body.dark #d12 .mcq { background: #1e293b; }
+body.dark #d12 .wcard, body.dark #d12 .ccard { background: #1a2030; }
+body.dark #d12 .ionic-card { background: #1a2030; }
+
+body.dark #d13 .mcq { background: #1e293b; }
+body.dark #d13 .wcard, body.dark #d13 .ccard { background: #1a2030; }
+body.dark #d13 .ionic-card { background: #1a2030; }
+
+body.dark #d14 .mcq { background: #1e293b; }
+body.dark #d14 .wcard, body.dark #d14 .ccard { background: #1a2030; }
+body.dark #d14 .ionic-card { background: #1a2030; }
+
+body.dark #d15 .mcq { background: #1e293b; }
+body.dark #d15 .wcard, body.dark #d15 .ccard { background: #1a2030; }
+body.dark #d15 .ionic-card { background: #1a2030; }
+
+body.dark #d16 .mcq { background: #1e293b; }
+body.dark #d16 .wcard, body.dark #d16 .ccard { background: #1a2030; }
+body.dark #d16 .ionic-card { background: #1a2030; }
+
+body.dark #d17 .mcq { background: #1e293b; }
+body.dark #d17 .wcard, body.dark #d17 .ccard { background: #1a2030; }
+body.dark #d17 .ionic-card { background: #1a2030; }
+
+body.dark #d18 .mcq { background: #1e293b; }
+body.dark #d18 .wcard, body.dark #d18 .ccard { background: #1a2030; }
+body.dark #d18 .ionic-card { background: #1a2030; }
+
+
+/* MCQ number per lesson */
+#d1 .mcq-num { background: #0f3460; }
+#d2 .mcq-num { background: #7b2d8b; }
+#d3 .mcq-num { background: #c62828; }
+#d4 .mcq-num { background: #e65100; }
+#d5 .mcq-num { background: #1565c0; }
+#d6 .mcq-num { background: #2e7d32; }
+#d7 .mcq-num { background: #00838f; }
+#d8 .mcq-num { background: #ad1457; }
+#d9 .mcq-num { background: #4527a0; }
+#d10 .mcq-num { background: #00695c; }
+#d11 .mcq-num { background: #6d4c41; }
+#d12 .mcq-num { background: #283593; }
+#d13 .mcq-num { background: #558b2f; }
+#d14 .mcq-num { background: #37474f; }
+#d15 .mcq-num { background: #0277bd; }
+#d16 .mcq-num { background: #c6a000; }
+#d17 .mcq-num { background: #d84315; }
+#d18 .mcq-num { background: #1a9a5c; }
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <div class="header-badge">مراجعة شاملة</div>
+      <div class="header-title">مراجعة الكيمياء</div>
+      <div class="header-sub">الصف الأول الثانوي — الفصل الدراسي الأول</div>
+      <div class="header-tools no-print">
+        <button class="tool-btn" id="toggleAnswers" onclick="toggleAllAnswers()">👁 إخفاء الإجابات</button>
+        <button class="tool-btn" id="darkBtn" onclick="toggleDark()">🌙 وضع ليلي</button>
+        <button class="tool-btn" onclick="window.print()">🖨 طباعة / PDF</button>
+        <button class="tool-btn download-btn" onclick="downloadHTML()">⬇ تحميل HTML</button>
+        <span class="font-ctrl">
+          <button class="font-btn" onclick="changeFont(-1)">A-</button>
+          <button class="font-btn" onclick="changeFont(1)">A+</button>
+        </span>
+      </div>
+    </div>
+    <div class="header-meta">
+      <div class="teacher-card">
+        <div class="teacher-en">Antar Al-Shuwaikh</div>
+        <div class="teacher-ar">أ. عنتر الشويخ</div>
+        <div class="teacher-num">0567038457</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- TOC -->
+<nav class="toc-bar no-print">
+  <span>انتقل إلى:</span>
+  <button class="toc-link" style="background:#0f3460;color:white;border-color:#0f3460;" onclick="goTo('d1')">د١</button>
+  <button class="toc-link" style="background:#7b2d8b;color:white;border-color:#7b2d8b;" onclick="goTo('d2')">د٢</button>
+  <button class="toc-link" style="background:#c62828;color:white;border-color:#c62828;" onclick="goTo('d3')">د٣</button>
+  <button class="toc-link" style="background:#e65100;color:white;border-color:#e65100;" onclick="goTo('d4')">د٤</button>
+  <button class="toc-link" style="background:#1565c0;color:white;border-color:#1565c0;" onclick="goTo('d5')">د٥</button>
+  <button class="toc-link" style="background:#2e7d32;color:white;border-color:#2e7d32;" onclick="goTo('d6')">د٦</button>
+  <button class="toc-link" style="background:#00838f;color:white;border-color:#00838f;" onclick="goTo('d7')">د٧</button>
+  <button class="toc-link" style="background:#ad1457;color:white;border-color:#ad1457;" onclick="goTo('d8')">د٨</button>
+  <button class="toc-link" style="background:#4527a0;color:white;border-color:#4527a0;" onclick="goTo('d9')">د٩</button>
+  <button class="toc-link" style="background:#00695c;color:white;border-color:#00695c;" onclick="goTo('d10')">د١٠</button>
+  <button class="toc-link" style="background:#6d4c41;color:white;border-color:#6d4c41;" onclick="goTo('d11')">د١١</button>
+  <button class="toc-link" style="background:#283593;color:white;border-color:#283593;" onclick="goTo('d12')">د١٢</button>
+  <button class="toc-link" style="background:#558b2f;color:white;border-color:#558b2f;" onclick="goTo('d13')">د١٣</button>
+  <button class="toc-link" style="background:#37474f;color:white;border-color:#37474f;" onclick="goTo('d14')">د١٤</button>
+  <button class="toc-link" style="background:#0277bd;color:white;border-color:#0277bd;" onclick="goTo('d15')">د١٥</button>
+  <button class="toc-link" style="background:#c6a000;color:white;border-color:#c6a000;" onclick="goTo('d16')">د١٦</button>
+  <button class="toc-link" style="background:#d84315;color:white;border-color:#d84315;" onclick="goTo('d17')">د١٧</button>
+  <button class="toc-link" style="background:#1a9a5c;color:white;border-color:#1a9a5c;" onclick="goTo('d18')">د١٨</button>
+</nav>
+
+
+<!-- SEARCH BAR -->
+<div class="search-bar no-print" id="searchBar">
+  <span class="search-icon">🔍</span>
+  <input type="text" id="searchInput" placeholder="ابحث في الأسئلة... مثال: أوزون، ذرة، مول"
+         oninput="doSearch(this.value)">
+  <button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button>
+  <span class="search-count" id="searchCount"></span>
+</div>
+
+<!-- ══════════════════════════════════════════════ -->
+<main class="content">
+
+<!-- ══ LESSON 1 ══ -->
+<div class="lesson-block" id="d1">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">١</div>
+    <div class="lesson-title">الدرس الأول: قصة مادتين</div>
+  </div>
+
+  <div class="summary-box no-print"><ul><li>الكيمياء: العلم الذي يدرس <span class="summary-key">المادة وخصائصها وتغيراتها</span></li><li>المادة: كل ما يشغل حيزاً من الفراغ وله كتلة</li><li>طبقة الأوزون O₃ في <span class="summary-key">الستراتوسفير</span> (10–50 كم) تمتص الأشعة فوق البنفسجية</li><li>مركبات <span class="summary-formula">CFC</span> (كلور + فلور + كربون) تُدمر طبقة الأوزون</li><li>المعدل الطبيعي للأوزون: <span class="summary-key">300 وحدة دوبسون</span></li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d1" onclick="toggleQuiz('d1')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d1">
+  <div>النتيجة: <span class="score-num" id="sc_d1">0</span> / <span id="st_d1">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d1')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-blue">أسئلة الاختيار من متعدد</div>
+  <div class="mcq-grid">
+    <div class="mcq"><div class="mcq-num">١</div><div class="mcq-body"><div class="mcq-q">عنوان الدرس الأول في الكتاب</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">قصة مادتين</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٢</div><div class="mcq-body"><div class="mcq-q">العلم الذي يدرس المادة والتغيرات</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">الكيمياء</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٣</div><div class="mcq-body"><div class="mcq-q">كل ما يشغل حيزاً وله كتلة</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">المادة</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٤</div><div class="mcq-body"><div class="mcq-q">أيٌّ مما يُعتبر مادة</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">الهواء</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٥</div><div class="mcq-body"><div class="mcq-q">المادة ذات التركيب الثابت المحدد</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">المادة النقية</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٦</div><div class="mcq-body"><div class="mcq-q">ما لا يُعتبر مادة كيميائية</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">الحرارة</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٧</div><div class="mcq-body"><div class="mcq-q">أضرار أشعة فوق البنفسجية UVB</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">جميع ما ذكر</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٨</div><div class="mcq-body"><div class="mcq-q">الغاز الذي يمتص الأشعة الضارة قبل وصولها للأرض</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">الأوزون O₃</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٩</div><div class="mcq-body"><div class="mcq-q">ناتج تحلل ١٢ ذرة أكسجين من جزيئات O₂ وتفاعلها</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">٤ جزيئات أوزون O₃</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٠</div><div class="mcq-body"><div class="mcq-q">الطبقة (10–50 كم) التي تحوي الأوزون</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">الستراتوسفير</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١١</div><div class="mcq-body"><div class="mcq-q">تُقاس كمية الأوزون في الجو بواسطة</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">البالونات</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٢</div><div class="mcq-body"><div class="mcq-q">المعدل الطبيعي للأوزون بوحدة دوبسون</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">300 DU</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٣</div><div class="mcq-body"><div class="mcq-q">يتناقص الأوزون فوق القارة</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">القطبية الجنوبية</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٤</div><div class="mcq-body"><div class="mcq-q">مركبات CFC تتكون من</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">الكلور والفلور والكربون</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٥</div><div class="mcq-body"><div class="mcq-q">الغاز المستخدم في التبريد سابقاً</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">الفريون (CFC)</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٦</div><div class="mcq-body"><div class="mcq-q">من استعمالات الكلوروفلوروكربون</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">جميع ما ذكر</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٧</div><div class="mcq-body"><div class="mcq-q">المواد التي تُسبب تناقص طبقة الأوزون</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">الكلوروفلوروكربون CFC</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٨</div><div class="mcq-body"><div class="mcq-q">رمزا المادتين في الدرس</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">CFC – O₃</div></div></div></div>
+  </div>
+
+  <div class="section-pill pill-green">السؤال المقالي</div>
+  <div class="wcard">
+    <div class="wcard-q">كيف يتكون غاز الأوزون في الغلاف الجوي؟</div>
+    <div class="wcard-a">
+      تمتص جزيئات O₂ في الستراتوسفير الأشعة فوق البنفسجية (hν) فتتفكك:<br>
+      &emsp;O₂ + hν → O + O<br>
+      ثم تتحد كل ذرة أكسجين مع جزيء O₂ آخر لتكوّن الأوزون:<br>
+      &emsp;O + O₂ → O₃<br>
+      <span style="font-size:12px;color:#555;">المعادلة الإجمالية: 3O₂ ⇌ 2O₃</span>
+    </div>
+  </div>
+</div>
+<div class="print-footer" style="display:none;">Antar Al-Shuwaikh | 0567038457 | مراجعة الكيمياء — الأول الثانوي</div>
+
+<div class="divider"></div>
+
+<!-- ══ LESSON 2 ══ -->
+<div class="lesson-block" id="d2">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">٢</div>
+    <div class="lesson-title">الدرس الثاني: الكيمياء والمادة</div>
+  </div>
+  <div class="summary-box no-print"><ul><li>الكتلة: مقياس <span class="summary-key">كمية المادة فقط</span> — ثابتة في أي مكان</li><li>الوزن: مقياس كمية المادة × قوة الجاذبية — يتغير بتغير الموقع</li><li>النموذج: تفسير مرئي أو لفظي للبيانات التجريبية</li><li>فروع الكيمياء: عضوية / غير عضوية / تحليلية / فيزيائية / حيوية / بوليمرات</li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d2" onclick="toggleQuiz('d2')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d2">
+  <div>النتيجة: <span class="score-num" id="sc_d2">0</span> / <span id="st_d2">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d2')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-blue">أسئلة الاختيار من متعدد</div>
+  <div class="mcq-grid">
+    <div class="mcq"><div class="mcq-num">١</div><div class="mcq-body"><div class="mcq-q">أيٌّ مما يُعتبر مادة</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">الهواء</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٢</div><div class="mcq-body"><div class="mcq-q">مقياس كمية المادة فقط</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">الكتلة</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٣</div><div class="mcq-body"><div class="mcq-q">حاصل ضرب الكتلة في تسارع الجاذبية (W=mg)، يتغير من مكان لآخر</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">الوزن</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٤</div><div class="mcq-body"><div class="mcq-q">تفسير مرئي أو لفظي للبيانات التجريبية</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">النموذج</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٥</div><div class="mcq-body"><div class="mcq-q">من أمثلة النماذج</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">جميع ما ذكر</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٦</div><div class="mcq-body"><div class="mcq-q">علم يدرس نظريات تركيب المادة</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">البنيوية</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٧</div><div class="mcq-body"><div class="mcq-q">علم يدرس مركبات الكربون</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">الكيمياء العضوية</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٨</div><div class="mcq-body"><div class="mcq-q">علم يهتم بإنتاج ألياف النسيج</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">كيمياء المبلمرات</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٩</div><div class="mcq-body"><div class="mcq-q">علم صنع النقود من الفلزات</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">الكيمياء غير العضوية</div></div></div></div>
+  </div>
+  <div class="section-pill pill-green">أسئلة علل</div>
+  <div class="wcard"><div class="wcard-q">يُفضّل استعمال الكتلة بدلاً من الوزن؟</div><div class="wcard-a">لأن الكتلة ثابتة لا تتغير بتغير الموقع، بينما الوزن يتغير بتغير قوة الجاذبية.</div></div>
+  <div class="wcard"><div class="wcard-q">يدرس الكيميائيون الذرات رغم أنها لا تُرى بالعين المجردة؟</div><div class="wcard-a">لأن فهم تركيب الذرات يُفسّر خصائص المواد ويُمكّن من تصميم مواد ذات خصائص مفيدة.</div></div>
+  <div class="wcard"><div class="wcard-q">يستعمل الكيميائي النماذج؟</div><div class="wcard-a">لأن الذرات أصغر من أن تُرى مباشرةً، فالنماذج تمثّل تركيبها وتُفسّر سلوكها.</div></div>
+  <div class="wcard"><div class="wcard-q">تعدد فروع علم الكيمياء؟</div><div class="wcard-a">بسبب تنوع المواد الكيميائية واتساع مجالاتها (طب، صناعة، زراعة، بيئة)، مما استلزم تخصصاً لكل مجال.</div></div>
+</div>
+<div class="print-footer" style="display:none;">Antar Al-Shuwaikh | 0567038457 | مراجعة الكيمياء — الأول الثانوي</div>
+
+<div class="divider"></div>
+
+<!-- ══ LESSON 3 ══ -->
+<div class="lesson-block" id="d3">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">٣</div>
+    <div class="lesson-title">الدرس الثالث: الطرائق العلمية</div>
+  </div>
+  <div class="summary-box no-print"><ul><li>خطوات الطريقة العلمية: <span class="summary-key">ملاحظة ← فرضية ← تجربة ← تحليل ← استنتاج ← نظرية/قانون</span></li><li>المتغير المستقل: الذي <span class="summary-key">تُغيّره</span> أنت | التابع: الذي <span class="summary-key">يتغير نتيجةً</span> له</li><li>الثابت: لا يتغير | الضابط: مجموعة المقارنة</li><li>النظرية: تفسير يدعمها الزمن | القانون: علاقة في الطبيعة تدعمها تجارب متعددة</li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d3" onclick="toggleQuiz('d3')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d3">
+  <div>النتيجة: <span class="score-num" id="sc_d3">0</span> / <span id="st_d3">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d3')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-blue">أسئلة الاختيار من متعدد</div>
+  <div class="mcq-grid">
+    <div class="mcq"><div class="mcq-num">١</div><div class="mcq-body"><div class="mcq-q">طريقة منظمة لحل المشكلات والتحقق من عمل العلماء</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">الطريقة العلمية</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٢</div><div class="mcq-body"><div class="mcq-q">عملية جمع المعلومات والبيانات</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">الملاحظة</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٣</div><div class="mcq-body"><div class="mcq-q">معلومات توصف باستخدام الحواس</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">بيانات نوعية</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٤</div><div class="mcq-body"><div class="mcq-q">معلومات توصف بالأرقام</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">بيانات كمية</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٥</div><div class="mcq-body"><div class="mcq-q">لا يُعتبر مثالاً على البيانات الكمية</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">الرائحة</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٦</div><div class="mcq-body"><div class="mcq-q">تفسير مؤقت لظاهرة أو حدث</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">الفرضية</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٧</div><div class="mcq-body"><div class="mcq-q">الخطوة الثالثة من الطريقة العلمية</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">التجربة</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٨</div><div class="mcq-body"><div class="mcq-q">المتغير الذي تخطط لتغييره في التجربة</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">المستقل</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٩</div><div class="mcq-body"><div class="mcq-q">المتغير الذي يتغير تبعاً للمستقل</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">التابع</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٠</div><div class="mcq-body"><div class="mcq-q">العامل الذي لا يُغيَّر أثناء التجربة</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">الثابت</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١١</div><div class="mcq-body"><div class="mcq-q">المعيار المستعمل للمقارنة في التجربة</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">الضابط</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٢</div><div class="mcq-body"><div class="mcq-q">حكم قائم على المعلومات المكتسبة</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">الاستنتاج</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٣</div><div class="mcq-body"><div class="mcq-q">تفسير لظاهرة يدعمها الزمن والتجارب</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">النظرية</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٤</div><div class="mcq-body"><div class="mcq-q">علاقة في الطبيعة تدعمها تجارب متعددة</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">القانون العلمي</div></div></div></div>
+  </div>
+  <div class="section-pill pill-gold">تجربة ذوبان الملح — تحديد المتغيرات</div>
+  <div class="tbl-wrap"><table class="ktbl">
+    <tr><th>المتغير المستقل</th><th>المتغير التابع</th><th>العامل الثابت</th><th>الضابط</th></tr>
+    <tr><td class="ans-cell">درجة حرارة الماء</td><td class="ans-cell">معدل ذوبان الملح</td><td class="ans-cell">كمية الملح والماء</td><td class="ans-cell">الماء البارد بلا ملح</td></tr>
+  </table></div>
+  <div class="section-pill pill-green">خطوات الطريقة العلمية بالترتيب</div>
+  <div class="wcard"><div class="wcard-a">ملاحظة ← فرضية ← تجربة ← جمع بيانات ← تحليل ← استنتاج ← نظرية / قانون</div></div>
+</div>
+<div class="print-footer" style="display:none;">Antar Al-Shuwaikh | 0567038457 | مراجعة الكيمياء — الأول الثانوي</div>
+
+<div class="divider"></div>
+
+<!-- ══ LESSON 4 ══ -->
+<div class="lesson-block" id="d4">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">٤</div>
+    <div class="lesson-title">الدرس الرابع: البحث العلمي</div>
+  </div>
+  <div class="summary-box no-print"><ul><li>البحث النظري: يهدف للمعرفة نفسها (بدون تطبيق مباشر)</li><li>البحث التطبيقي: يهدف <span class="summary-key">لحل مشكلة محددة</span></li><li>سلامة المختبر: معطف + نظارات + قفازات + حذاء مغلق</li><li>ممنوع: أكل، شرب، عدسات لاصقة، ملابس فضفاضة في المعمل</li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d4" onclick="toggleQuiz('d4')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d4">
+  <div>النتيجة: <span class="score-num" id="sc_d4">0</span> / <span id="st_d4">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d4')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-blue">أسئلة الاختيار من متعدد</div>
+  <div class="mcq-grid">
+    <div class="mcq"><div class="mcq-num">١</div><div class="mcq-body"><div class="mcq-q">البحث الذي يُجرى للحصول على المعرفة نفسها</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">البحث النظري</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٢</div><div class="mcq-body"><div class="mcq-q">البحث الذي يُجرى لحل مشكلة محددة</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">البحث التطبيقي</div></div></div></div>
+  </div>
+  <div class="section-pill pill-green">ثلاثة فوائد لعلم الكيمياء</div>
+  <div class="wcard"><div class="wcard-a">
+    <div class="step"><div class="step-dot"></div><span>تطوير الأدوية والعلاجات الطبية التي تُنقذ الأرواح.</span></div>
+    <div class="step"><div class="step-dot"></div><span>إنتاج مواد صناعية جديدة: بلاستيك، ألياف نسيجية، أصباغ.</span></div>
+    <div class="step"><div class="step-dot"></div><span>فهم التفاعلات البيئية والحدّ من التلوث وحماية طبقة الأوزون.</span></div>
+  </div></div>
+  <div class="section-pill pill-green">علل سلامة المختبر</div>
+  <div class="wcard"><div class="wcard-q">لبس المعطف والنظارات والقفازات؟</div><div class="wcard-a">لحماية الجلد والعينين من تطاير المواد الكيميائية الخطرة أثناء التجارب.</div></div>
+  <div class="wcard"><div class="wcard-q">عدم لبس عدسات لاصقة في المعمل؟</div><div class="wcard-a">لأن أبخرة الكيماويات تتراكم خلف العدسة فتُسبب أضراراً بالغة بالعين يصعب علاجها.</div></div>
+  <div class="wcard"><div class="wcard-q">عدم لبس ملابس فضفاضة في المختبر؟</div><div class="wcard-a">لأنها قد تشتعل أو تُسقط المعدات أو تنغمس في المواد الكيميائية.</div></div>
+  <div class="wcard"><div class="wcard-q">عدم إعادة المواد الفائضة إلى العبوة الأصلية؟</div><div class="wcard-a">لأن إعادتها تُلوّث الكمية الأصلية وتُفسد دقة التجارب المستقبلية.</div></div>
+</div>
+<div class="print-footer" style="display:none;">Antar Al-Shuwaikh | 0567038457 | مراجعة الكيمياء — الأول الثانوي</div>
+
+<div class="divider"></div>
+
+<!-- ══ LESSON 5 ══ -->
+<div class="lesson-block" id="d5">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">٥</div>
+    <div class="lesson-title">الدرس الخامس: خواص المادة</div>
+  </div>
+  <div class="summary-box no-print"><ul><li>حالات المادة: صلبة (حجم وشكل ثابتان) | سائلة (حجم ثابت، شكل الوعاء) | غازية (حجم وشكل متغيران)</li><li>البلازما: الحالة الرابعة — غاز متأين (أيونات + إلكترونات حرة)</li><li>خاصية <span class="summary-key">فيزيائية</span>: تُلاحظ دون تغيير التركيب | <span class="summary-key">كيميائية</span>: تظهر عند التفاعل</li><li>مميزة: ثابتة مهما تغيرت الكمية (كثافة، درجة غليان) | غير مميزة: تعتمد على الكمية (كتلة، حجم)</li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d5" onclick="toggleQuiz('d5')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d5">
+  <div>النتيجة: <span class="score-num" id="sc_d5">0</span> / <span id="st_d5">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d5')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-gold">جدول مقارنة حالات المادة الثلاث</div>
+  <div class="tbl-wrap"><table class="ktbl">
+    <tr><th>الحالة</th><th>الحجم</th><th>الشكل</th><th>الجسيمات</th><th>الانضغاط</th><th>أمثلة</th></tr>
+    <tr><td><strong>الصلبة</strong></td><td class="ans-cell">ثابت</td><td class="ans-cell">ثابت</td><td class="ans-cell">متراصة</td><td class="ans-cell">لا</td><td class="ans-cell">جليد، ملح</td></tr>
+    <tr><td><strong>السائلة</strong></td><td class="ans-cell">ثابت</td><td class="ans-cell">شكل الوعاء</td><td class="ans-cell">متقاربة متحركة</td><td class="ans-cell">لا</td><td class="ans-cell">ماء، زئبق</td></tr>
+    <tr><td><strong>الغازية</strong></td><td class="ans-cell">غير ثابت</td><td class="ans-cell">غير ثابت</td><td class="ans-cell">متباعدة حرة</td><td class="ans-cell">نعم</td><td class="ans-cell">هواء، بخار</td></tr>
+  </table></div>
+  <div class="section-pill pill-blue">أسئلة الاختيار من متعدد</div>
+  <div class="mcq-grid">
+    <div class="mcq"><div class="mcq-num">١</div><div class="mcq-body"><div class="mcq-q">الحالة الرابعة للمادة — غاز متأين من أيونات وإلكترونات حرة</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">البلازما</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٢</div><div class="mcq-body"><div class="mcq-q">الحالة الغازية لمادة صلبة أو سائلة عادةً</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">البخار</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٣</div><div class="mcq-body"><div class="mcq-q">خاصية تُلاحظ أو تُقاس دون تغيير تركيب المادة</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">خاصية فيزيائية</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٤</div><div class="mcq-body"><div class="mcq-q">قدرة مادة على التفاعل مع مادة أخرى لتكوين مادة جديدة</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">خاصية كيميائية</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٥</div><div class="mcq-body"><div class="mcq-q">من الخواص الكيميائية</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">الاحتراق</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٦</div><div class="mcq-body"><div class="mcq-q">الخواص الفيزيائية التي تعتمد على كمية المادة</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">غير مميزة</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٧</div><div class="mcq-body"><div class="mcq-q">الخواص الثابتة مهما تغيرت الكمية</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">مميزة</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٨</div><div class="mcq-body"><div class="mcq-q">من الخواص الفيزيائية المميزة</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">الكثافة</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٩</div><div class="mcq-body"><div class="mcq-q">الصدأ خاصية</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">كيميائية</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٠</div><div class="mcq-body"><div class="mcq-q">درجة الغليان خاصية</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">فيزيائية مميزة</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١١</div><div class="mcq-body"><div class="mcq-q">الكتلة خاصية</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">فيزيائية غير مميزة</div></div></div></div>
+  </div>
+  <div class="section-pill pill-gold">تصنيف الخواص</div>
+  <div class="tbl-wrap"><table class="ktbl">
+    <tr><th>الخاصية</th><th>الرائحة</th><th>قابلية الاشتعال</th><th>الكتلة</th><th>الصدأ</th><th>درجة الغليان</th><th>الكثافة</th></tr>
+    <tr><td>ف / ك</td><td class="ans-cell">فيزيائية</td><td class="ans-cell">كيميائية</td><td class="ans-cell">فيزيائية</td><td class="ans-cell">كيميائية</td><td class="ans-cell">فيزيائية</td><td class="ans-cell">فيزيائية</td></tr>
+    <tr><td>مميزة / غير</td><td class="ans-cell">مميزة</td><td class="ans-cell">—</td><td class="ans-cell">غير مميزة</td><td class="ans-cell">—</td><td class="ans-cell">مميزة</td><td class="ans-cell">مميزة</td></tr>
+  </table></div>
+</div>
+<div class="print-footer" style="display:none;">Antar Al-Shuwaikh | 0567038457 | مراجعة الكيمياء — الأول الثانوي</div>
+
+<div class="divider"></div>
+
+<!-- ══ LESSON 6 ══ -->
+<div class="lesson-block" id="d6">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">٦</div>
+    <div class="lesson-title">الدرس السادس: تغيرات المادة</div>
+  </div>
+  <div class="summary-box no-print"><ul><li>تغيّر فيزيائي: لا يُغيّر التركيب الكيميائي (تجمد، قص، ذوبان)</li><li>تغيّر كيميائي: يُنتج مادة جديدة (احتراق، صدأ، فساد)</li><li>دلائل التفاعل الكيميائي: تغيّر لون / غاز / حرارة / راسب / رائحة</li><li><span class="summary-key">قانون حفظ الكتلة:</span> <span class="summary-formula">كتلة المتفاعلات = كتلة النواتج</span></li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d6" onclick="toggleQuiz('d6')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d6">
+  <div>النتيجة: <span class="score-num" id="sc_d6">0</span> / <span id="st_d6">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d6')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-blue">أسئلة الاختيار من متعدد</div>
+  <div class="mcq-grid">
+    <div class="mcq"><div class="mcq-num">١</div><div class="mcq-body"><div class="mcq-q">تغير لا يُغيّر تركيب المادة</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">فيزيائي</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٢</div><div class="mcq-body"><div class="mcq-q">ما يلي تغيرات فيزيائية عدا</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">فساد الحليب</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٣</div><div class="mcq-body"><div class="mcq-q">تحوّل المادة من حالة لحالة</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">تغيّر الحالة</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٤</div><div class="mcq-body"><div class="mcq-q">تحول مادة لتكوين مواد جديدة</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">تغيّر كيميائي</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٥</div><div class="mcq-body"><div class="mcq-q">ما يلي تغيرات كيميائية عدا</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">تجمد الماء</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٦</div><div class="mcq-body"><div class="mcq-q">من دلائل التفاعل الكيميائي</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">جميع ما ذكر</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٧</div><div class="mcq-body"><div class="mcq-q">كتلة المتفاعلات تساوي كتلة النواتج دائماً</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">قانون حفظ الكتلة</div></div></div></div>
+  </div>
+  <div class="section-pill pill-amber">حسابات قانون حفظ الكتلة</div>
+  <div class="ccard">
+    <div class="ccard-q">س٨: تحلل 90g ماء فأنتج 79.4g أكسجين + هيدروجين. احسب كتلة الهيدروجين.</div>
+    <div class="ccard-steps">الكتلة = كتلة الماء − كتلة الأكسجين = 90 − 79.4</div>
+    <div class="ccard-result">∴ الهيدروجين = 10.6 g</div>
+  </div>
+  <div class="ccard">
+    <div class="ccard-q">س٩: تفاعل 10g ماغنيسيوم مع أكسجين فأنتج 16.6g أكسيد الماغنيسيوم. كم أكسجين تفاعل؟</div>
+    <div class="ccard-steps">كتلة الأكسجين = كتلة الناتج − كتلة المتفاعل = 16.6 − 10</div>
+    <div class="ccard-result">∴ الأكسجين = 6.6 g</div>
+  </div>
+  <div class="ccard">
+    <div class="ccard-q">س١٠: تفاعل 180g جلوكوز + 192g أكسجين فأنتج 108g ماء + CO₂. احسب كتلة CO₂.</div>
+    <div class="ccard-steps">إجمالي المتفاعلات = 180 + 192 = 372 g &nbsp;|&nbsp; كتلة CO₂ = 372 − 108</div>
+    <div class="ccard-result">∴ CO₂ = 264 g</div>
+  </div>
+</div>
+<div class="print-footer" style="display:none;">Antar Al-Shuwaikh | 0567038457 | مراجعة الكيمياء — الأول الثانوي</div>
+
+<div class="divider"></div>
+
+<!-- ══ LESSON 7 ══ -->
+<div class="lesson-block" id="d7">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">٧</div>
+    <div class="lesson-title">الدرس السابع: المخاليط</div>
+  </div>
+  <div class="summary-box no-print"><ul><li>المخلوط: مزيج مادتين أو أكثر تحتفظ بخواصها الأصلية</li><li>متجانس (محلول): تركيب منتظم في كل جزء | غير متجانس: تركيب غير منتظم</li><li>طرق الفصل: الترشيح | التبخير | التقطير | التسامي | الكروماتوغرافيا</li><li>الكروماتوغرافيا: فصل بناءً على اختلاف انجذاب المكونات لطورَين (ثابت ومتحرك)</li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d7" onclick="toggleQuiz('d7')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d7">
+  <div>النتيجة: <span class="score-num" id="sc_d7">0</span> / <span id="st_d7">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d7')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-blue">أسئلة الاختيار من متعدد</div>
+  <div class="mcq-grid">
+    <div class="mcq"><div class="mcq-num">١</div><div class="mcq-body"><div class="mcq-q">مزيج مادتين أو أكثر تحتفظ بخواصها</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">المخلوط</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٢</div><div class="mcq-body"><div class="mcq-q">ما يلي مخاليط عدا</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">الماء النقي</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٣</div><div class="mcq-body"><div class="mcq-q">مخلوط بتركيب غير منتظم</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">غير متجانس</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٤</div><div class="mcq-body"><div class="mcq-q">من المخاليط غير المتجانسة</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">جميع ما ذكر</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٥</div><div class="mcq-body"><div class="mcq-q">مخلوط بتركيب منتظم</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">متجانس (محلول)</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٦</div><div class="mcq-body"><div class="mcq-q">ما يلي متجانسة عدا</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">الرمل والملح</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٧</div><div class="mcq-body"><div class="mcq-q">فصل الصلب عن السائل بحاجز مسامي</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">الترشيح</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٨</div><div class="mcq-body"><div class="mcq-q">فصل رمل من ماء</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">الترشيح</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٩</div><div class="mcq-body"><div class="mcq-q">الطريقة التي تُعطي مادة نقية بالتبخير</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">التبخير / التقطير</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٠</div><div class="mcq-body"><div class="mcq-q">فصل ملح مذاب من ماء</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">التبخير</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١١</div><div class="mcq-body"><div class="mcq-q">الفصل بالاختلاف في درجة الغليان</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">التقطير</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٢</div><div class="mcq-body"><div class="mcq-q">تحوّل الصلب مباشرةً للغاز دون انصهار</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">التسامي</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٣</div><div class="mcq-body"><div class="mcq-q">فصل اليود من الرمل</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">التسامي</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٤</div><div class="mcq-body"><div class="mcq-q">طريقة فصل تعتمد على اختلاف انجذاب المكونات لطور ثابت ومتحرك</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">الكروماتوغرافيا</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٥</div><div class="mcq-body"><div class="mcq-q">فصل الحبر</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">الكروماتوغرافيا</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">١٦</div><div class="mcq-body"><div class="mcq-q">فصل الرمل والملح معاً (خطوتان)</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">إضافة ماء + ترشيح (الرمل) ثم تبخير (الملح)</div></div></div></div>
+  </div>
+</div>
+<div class="print-footer" style="display:none;">Antar Al-Shuwaikh | 0567038457 | مراجعة الكيمياء — الأول الثانوي</div>
+
+<div class="divider"></div>
+
+<!-- ══ LESSON 8 ══ -->
+<div class="lesson-block" id="d8">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">٨</div>
+    <div class="lesson-title">الدرس الثامن: العناصر والمركبات</div>
+  </div>
+  <div class="summary-box no-print"><ul><li>العنصر: مادة نقية لا تتجزأ كيميائياً | المركب: اتحاد عنصرين أو أكثر بنسب ثابتة</li><li>الجدول الدوري: دورات (أفقية) + مجموعات (رأسية)</li><li><span class="summary-key">قانون النسب الثابتة:</span> المركب دائماً له نسب كتلية ثابتة</li><li><span class="summary-formula">النسبة % = (كتلة العنصر ÷ كتلة المركب) × 100</span></li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d8" onclick="toggleQuiz('d8')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d8">
+  <div>النتيجة: <span class="score-num" id="sc_d8">0</span> / <span id="st_d8">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d8')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-blue">أسئلة الاختيار من متعدد</div>
+  <div class="mcq-grid">
+    <div class="mcq"><div class="mcq-num">١</div><div class="mcq-body"><div class="mcq-q">مادة نقية لا تتجزأ إلى أجزاء أصغر بالطرق الكيميائية</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">العنصر</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٢</div><div class="mcq-body"><div class="mcq-q">أيٌّ من التالي عنصر</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">النحاس Cu</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٣</div><div class="mcq-body"><div class="mcq-q">الصفوف الأفقية في الجدول الدوري</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">الدورات</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٤</div><div class="mcq-body"><div class="mcq-q">الأعمدة الرأسية في الجدول الدوري</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">المجموعات</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٥</div><div class="mcq-body"><div class="mcq-q">مادة تتكون من اتحاد عنصرين أو أكثر بنسب ثابتة</div><div class="mcq-ans"><div class="ans-dot">د</div><div class="ans-text">المركب</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٦</div><div class="mcq-body"><div class="mcq-q">أيٌّ من التالي عنصر لا مركب</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">الأكسجين O</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٧</div><div class="mcq-body"><div class="mcq-q">فصل الماء إلى هيدروجين وأكسجين</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">التحليل الكهربائي</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٨</div><div class="mcq-body"><div class="mcq-q">المركب يتكون من عناصر بنسب كتلية ثابتة</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">قانون النسب الثابتة</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٩</div><div class="mcq-body"><div class="mcq-q">نسبة كتل عنصر مع آخر أعداد بسيطة</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">قانون النسب المتضاعفة</div></div></div></div>
+  </div>
+  <div class="section-pill pill-amber">النسبة المئوية بالكتلة</div>
+  <div class="ccard">
+    <div class="ccard-q">عينة كتلتها 78g تحتوي 12.4g هيدروجين. النسبة المئوية للهيدروجين؟</div>
+    <div class="ccard-steps">النسبة % = (كتلة العنصر ÷ كتلة المركب) × 100 = (12.4 ÷ 78) × 100 = 15.897</div>
+    <div class="ccard-result">∴ النسبة ≈ 15.9%</div>
+  </div>
+  <div class="ccard">
+    <div class="ccard-q">1g هيدروجين يتفاعل مع 19g فلور. النسبة المئوية للهيدروجين؟</div>
+    <div class="ccard-steps">كتلة المركب = 1 + 19 = 20g &nbsp;|&nbsp; النسبة = (1 ÷ 20) × 100</div>
+    <div class="ccard-result">∴ النسبة = 5%</div>
+  </div>
+</div>
+<div class="print-footer" style="display:none;">Antar Al-Shuwaikh | 0567038457 | مراجعة الكيمياء — الأول الثانوي</div>
+
+<div class="divider"></div>
+
+<!-- ══ LESSON 9 ══ -->
+<div class="lesson-block" id="d9">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">٩</div>
+    <div class="lesson-title">الدرس التاسع: الأفكار القديمة للمادة</div>
+  </div>
+  <div class="summary-box no-print"><ul><li>ديمقريطس: أول من اقترح الذرة (فلسفياً، بدون تجارب)</li><li>أرسطو: المادة من تراب + نار + هواء + ماء (رفض فكرة الذرة)</li><li>دالتون: أول نظرية ذرية علمية قائمة على التجارب (1808م)</li><li>نظرية دالتون: الذرات لا تُخلق ولا تُفنى ولا تنجزأ، وتتحد بنسب بسيطة</li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d9" onclick="toggleQuiz('d9')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d9">
+  <div>النتيجة: <span class="score-num" id="sc_d9">0</span> / <span id="st_d9">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d9')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-gold">جدول مقارنة الفلاسفة</div>
+  <div class="tbl-wrap"><table class="ktbl">
+    <tr><th>الفكرة</th><th>ديمقريطس</th><th>أرسطو</th><th>دالتون</th></tr>
+    <tr><td>أول من اقترح وجود الذرات</td><td class="chk">✓</td><td class="crs">✗</td><td class="crs">✗</td></tr>
+    <tr><td>المادة من جسيمات صغيرة (ذرات)</td><td class="chk">✓</td><td class="crs">✗</td><td class="chk">✓</td></tr>
+    <tr><td>الذرات تتحرك في الفراغ</td><td class="chk">✓</td><td class="crs">✗</td><td class="crs">✗</td></tr>
+    <tr><td>الذرات لا تنجزأ ولا تفنى</td><td class="chk">✓</td><td class="crs">✗</td><td class="chk">✓</td></tr>
+    <tr><td>المادة من تراب ونار وهواء وماء</td><td class="crs">✗</td><td class="chk">✓</td><td class="crs">✗</td></tr>
+    <tr><td>ذرات العنصر متشابهة الحجم والكتلة</td><td class="crs">✗</td><td class="crs">✗</td><td class="chk">✓</td></tr>
+    <tr><td>الذرات تتحد بنسب عددية بسيطة</td><td class="crs">✗</td><td class="crs">✗</td><td class="chk">✓</td></tr>
+    <tr><td>الذرات تنفصل أو تتحد أو تُعاد ترتيبها</td><td class="crs">✗</td><td class="crs">✗</td><td class="chk">✓</td></tr>
+    <tr><td>إجراء تجارب عملية لدعم الفرضية</td><td class="crs">✗</td><td class="crs">✗</td><td class="chk">✓</td></tr>
+  </table></div>
+</div>
+<div class="print-footer" style="display:none;">Antar Al-Shuwaikh | 0567038457 | مراجعة الكيمياء — الأول الثانوي</div>
+
+<div class="divider"></div>
+
+<!-- ══ LESSONS 10-12 ══ -->
+<div class="lesson-block" id="d10">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">١٠</div>
+    <div class="lesson-title">الدرس العاشر: تعريف الذرة</div>
+  </div>
+  <div class="summary-box no-print"><ul><li>الذرة: أصغر جزء من العنصر يحتفظ بخواصه الكيميائية</li><li>البروتون: موجب (+) في النواة | النيوترون: محايد في النواة | الإلكترون: سالب (-) حول النواة</li><li>الذرة متعادلة: عدد البروتونات = عدد الإلكترونات</li><li>النواة: تحتوي معظم كتلة الذرة في حجم صغير جداً</li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d10" onclick="toggleQuiz('d10')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d10">
+  <div>النتيجة: <span class="score-num" id="sc_d10">0</span> / <span id="st_d10">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d10')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-blue">أسئلة الاختيار من متعدد</div>
+  <div class="mcq-grid">
+    <div class="mcq"><div class="mcq-num">١</div><div class="mcq-body"><div class="mcq-q">أصغر جزء من العنصر يحمل خواصه</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">الذرة</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٢</div><div class="mcq-body"><div class="mcq-q">جسيم سالب الشحنة يتحرك حول النواة</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">الإلكترون</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٣</div><div class="mcq-body"><div class="mcq-q">جسيم موجب الشحنة داخل النواة</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">البروتون</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٤</div><div class="mcq-body"><div class="mcq-q">جسيم غير مشحون داخل النواة كتلته ≈ البروتون</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">النيوترون</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٥</div><div class="mcq-body"><div class="mcq-q">مركز الذرة الكثيف يحوي البروتونات والنيوترونات</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">النواة</div></div></div></div>
+  </div>
+  <div class="section-pill pill-green">علل</div>
+  <div class="wcard"><div class="wcard-q">الذرة متعادلة كهربياً؟</div><div class="wcard-a">لأن عدد البروتونات الموجبة يساوي عدد الإلكترونات السالبة فتتعادل الشحنتان تماماً.</div></div>
+</div>
+
+<div class="lesson-block" id="d11">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">١١</div>
+    <div class="lesson-title">الدرس الحادي عشر: كيف تختلف الذرات</div>
+  </div>
+  <div class="summary-box no-print"><ul><li><span class="summary-key">العدد الذري (Z):</span> عدد البروتونات — يُحدد هوية العنصر</li><li><span class="summary-key">العدد الكتلي (A):</span> بروتونات + نيوترونات | <span class="summary-formula">N = A − Z</span></li><li><span class="summary-key">النظائر:</span> نفس Z، عدد N مختلف (مثل H-1, H-2, H-3)</li><li>وحدة الكتلة الذرية (u أو amu) = 1/12 من كتلة ذرة ¹²C</li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d11" onclick="toggleQuiz('d11')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d11">
+  <div>النتيجة: <span class="score-num" id="sc_d11">0</span> / <span id="st_d11">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d11')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-green">المصطلح العلمي</div>
+  <div class="tbl-wrap"><table class="ktbl">
+    <tr><th>#</th><th>العبارة</th><th>المصطلح</th></tr>
+    <tr><td>١</td><td>عدد البروتونات في نواة الذرة</td><td class="ans-cell">العدد الذري</td></tr>
+    <tr><td>٢</td><td>مجموع عدد البروتونات وعدد النيوترونات في نواة الذرة</td><td class="ans-cell">العدد الكتلي</td></tr>
+    <tr><td>٣</td><td>ذرات لها نفس العدد الذري تختلف في النيوترونات</td><td class="ans-cell">النظائر</td></tr>
+    <tr><td>٤</td><td>متوسط كتل نظائر العنصر</td><td class="ans-cell">الكتلة الذرية</td></tr>
+    <tr><td>٥</td><td>١/١٢ من كتلة ذرة الكربون−١٢</td><td class="ans-cell">وحدة الكتلة الذرية</td></tr>
+  </table></div>
+  <div class="section-pill pill-gold">أكمل جدول الجسيمات الذرية</div>
+  <div class="tbl-wrap"><table class="ktbl">
+    <tr><th>العنصر</th><th>العدد الذري</th><th>العدد الكتلي</th><th>البروتونات</th><th>الإلكترونات</th><th>النيوترونات</th></tr>
+    <tr><td>₁¹H</td><td class="ans-cell">١</td><td class="ans-cell">١</td><td class="ans-cell">١</td><td class="ans-cell">١</td><td class="ans-cell">٠</td></tr>
+    <tr><td>₆¹²C</td><td class="ans-cell">٦</td><td class="ans-cell">١٢</td><td class="ans-cell">٦</td><td class="ans-cell">٦</td><td class="ans-cell">٦</td></tr>
+    <tr><td>₁₁²³Na</td><td class="ans-cell">١١</td><td class="ans-cell">٢٣</td><td class="ans-cell">١١</td><td class="ans-cell">١١</td><td class="ans-cell">١٢</td></tr>
+  </table></div>
+  <div class="section-pill pill-green">علل</div>
+  <div class="wcard"><div class="wcard-q">الكتل الذرية ليست أعداداً صحيحة دائماً؟</div><div class="wcard-a">لأنها متوسط موزون لكتل نظائر العنصر بحسب نسبة وجودها في الطبيعة، وهذا المتوسط يكون كسراً عشرياً.</div></div>
+</div>
+
+<div class="lesson-block" id="d12">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">١٢</div>
+    <div class="lesson-title">الدرس الثاني عشر: الأنوية غير المستقرة</div>
+  </div>
+  <div class="summary-box no-print"><ul><li>النواة غير المستقرة: نيوتروناتها أكثر أو أقل من بروتوناتها</li><li>جسيم ألفا α: ⁴₂He (بروتونان + نيوترونان)، شحنة +2، أقل اختراقاً من β وγ</li><li>جسيم بيتا β: إلكترون عالي الطاقة من النواة، شحنة -1</li><li>أشعة جاما γ: فوتونات عالية الطاقة، عديمة الشحنة والكتلة، أعلى اختراقاً</li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d12" onclick="toggleQuiz('d12')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d12">
+  <div>النتيجة: <span class="score-num" id="sc_d12">0</span> / <span id="st_d12">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d12')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-blue">أسئلة الاختيار من متعدد</div>
+  <div class="mcq-grid">
+    <div class="mcq"><div class="mcq-num">١</div><div class="mcq-body"><div class="mcq-q">التفاعل الذي يُغيّر نواة الذرة</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">تفاعل نووي</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٢</div><div class="mcq-body"><div class="mcq-q">انبعاث إشعاع تلقائي من المواد المشعة</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">التحلل الإشعاعي</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٣</div><div class="mcq-body"><div class="mcq-q">جسيم: ٢ بروتون + ٢ نيوترون، شحنة +٢، مساوٍ لنواة الهيليوم ⁴₂He</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">جسيم ألفا α</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٤</div><div class="mcq-body"><div class="mcq-q">جسيم: إلكترون عالي الطاقة ينبثق من النواة، شحنة −١</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">جسيم بيتا β</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٥</div><div class="mcq-body"><div class="mcq-q">إشعاع كهرومغناطيسي عالي الطاقة عديم الكتلة والشحنة (فوتونات)</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">أشعة جاما γ</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٦</div><div class="mcq-body"><div class="mcq-q">النواة التي نيوتروناتها أكثر أو أقل من بروتوناتها</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">غير مستقرة</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٧</div><div class="mcq-body"><div class="mcq-q">طريقة تحديد عمر المواد الأثرية</div><div class="mcq-ans"><div class="ans-dot">أ</div><div class="ans-text">الكربون−١٤ المشع</div></div></div></div>
+  </div>
+  <div class="section-pill pill-green">علل</div>
+  <div class="wcard"><div class="wcard-q">تصدر الذرات المشعة إشعاعات؟</div><div class="wcard-a">لأن نواتها غير مستقرة (نيوترونات أكثر أو أقل من البروتونات) فتصدر إشعاعات α أو β أو γ للوصول لحالة أكثر استقراراً.</div></div>
+</div>
+<div class="print-footer" style="display:none;">Antar Al-Shuwaikh | 0567038457 | مراجعة الكيمياء — الأول الثانوي</div>
+
+<div class="divider"></div>
+
+<!-- ══ LESSON 13 ══ -->
+<div class="lesson-block" id="d13">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">١٣</div>
+    <div class="lesson-title">الدرس الثالث عشر: التوزيع الإلكتروني والصيغ والمعادلات</div>
+  </div>
+  <div class="summary-box no-print"><ul><li>التوزيع الإلكتروني: الإلكترونات تملأ المستويات <span class="summary-formula">1s→2s→2p→3s→3p→4s→3d</span></li><li><span class="summary-key">المتفاعلات</span> (يسار المعادلة) → <span class="summary-key">النواتج</span> (يمين المعادلة)</li><li>أنواع التفاعلات: تكوين | احتراق | تفكك | إحلال بسيط | إحلال مزدوج</li><li>توازن المعادلة: عدد ذرات كل عنصر <span class="summary-key">يتساوى في الطرفَين</span></li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d13" onclick="toggleQuiz('d13')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d13">
+  <div>النتيجة: <span class="score-num" id="sc_d13">0</span> / <span id="st_d13">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d13')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-gold">التوزيع الإلكتروني</div>
+  <div class="tbl-wrap"><table class="ktbl">
+    <tr><th>العنصر</th><th>التوزيع الإلكتروني</th></tr>
+    <tr><td>₆C</td><td class="ans-cell">1s² 2s² 2p²</td></tr>
+    <tr><td>₁₂Mg</td><td class="ans-cell">1s² 2s² 2p⁶ 3s²</td></tr>
+    <tr><td>₂₂Ti</td><td class="ans-cell">1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d²</td></tr>
+    <tr><td>₁₉K</td><td class="ans-cell">1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹</td></tr>
+    <tr><td>₂₉Cu (استثناء)</td><td class="ans-cell">1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹ 3d¹⁰</td></tr>
+    <tr><td>₂₄Cr (استثناء)</td><td class="ans-cell">1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹ 3d⁵</td></tr>
+    <tr><td>₂₀Ca²⁺</td><td class="ans-cell">1s² 2s² 2p⁶ 3s² 3p⁶ &nbsp;(فقد 2e⁻)</td></tr>
+    <tr><td>₉F⁻</td><td class="ans-cell">1s² 2s² 2p⁶ &nbsp;(اكتسب 1e⁻)</td></tr>
+  </table></div>
+  <div class="section-pill pill-gold">كتابة الصيغة الكيميائية</div>
+  <div class="tbl-wrap"><table class="ktbl">
+    <tr><th>المركب</th><th>الرموز</th><th>أعداد التأكسد</th><th>الصيغة</th></tr>
+    <tr><td>بروميد الكالسيوم</td><td>Ca، Br</td><td>+2 ، −1</td><td class="ans-cell">CaBr₂</td></tr>
+    <tr><td>كلوريد النحاس I</td><td>Cu، Cl</td><td>+1 ، −1</td><td class="ans-cell">CuCl</td></tr>
+    <tr><td>كربونات الألومنيوم</td><td>Al، CO₃</td><td>+3 ، −2</td><td class="ans-cell">Al₂(CO₃)₃</td></tr>
+    <tr><td>هيدروكسيد الحديد II</td><td>Fe، OH</td><td>+2 ، −1</td><td class="ans-cell">Fe(OH)₂</td></tr>
+    <tr><td>بيكربونات الصوديوم</td><td>Na، HCO₃</td><td>+1 ، −1</td><td class="ans-cell">NaHCO₃</td></tr>
+    <tr><td>كبريتات الخارصين</td><td>Zn، SO₄</td><td>+2 ، −2</td><td class="ans-cell">ZnSO₄</td></tr>
+  </table></div>
+  <div class="section-pill pill-green">المصطلح العلمي</div>
+  <div class="tbl-wrap"><table class="ktbl">
+    <tr><th>#</th><th>العبارة</th><th>المصطلح</th></tr>
+    <tr><td>١</td><td>إعادة ترتيب الذرات لتكوين مواد جديدة</td><td class="ans-cell">التفاعل الكيميائي</td></tr>
+    <tr><td>٢</td><td>المواد الموجودة في بداية التفاعل (يسار المعادلة)</td><td class="ans-cell">المتفاعلات</td></tr>
+    <tr><td>٣</td><td>المواد المتكونة خلال التفاعل (يمين المعادلة)</td><td class="ans-cell">النواتج</td></tr>
+    <tr><td>٤</td><td>تعبير يستخدم الصيغ الكيميائية لتوضيح المواد وكمياتها</td><td class="ans-cell">المعادلة الكيميائية الموزونة</td></tr>
+    <tr><td>٥</td><td>العدد المكتوب قبل الصيغة الكيميائية</td><td class="ans-cell">المعامل</td></tr>
+    <tr><td>٦</td><td>عدد الإلكترونات المكتسبة أو المفقودة</td><td class="ans-cell">عدد التأكسد</td></tr>
+  </table></div>
+  <div class="section-pill pill-amber">وازن المعادلات الكيميائية</div>
+  <div class="ccard"><div class="ccard-q">FeCl₃ + NaOH → Fe(OH)₃ + NaCl</div><div class="ccard-steps">وازن Fe: 1=1 ✓ | وازن Cl: 3→3 ✓ | وازن Na: 3=3 ✓ | وازن OH: 3=3 ✓</div><div class="ccard-result">∴ FeCl₃ + 3NaOH → Fe(OH)₃ + 3NaCl</div></div>
+  <div class="ccard"><div class="ccard-q">CH₄ + O₂ → CO₂ + H₂O</div><div class="ccard-steps">C: 1=1 ✓ | H: 4=4 ✓ | O: 4=4 ✓</div><div class="ccard-result">∴ CH₄ + 2O₂ → CO₂ + 2H₂O</div></div>
+  <div class="ccard"><div class="ccard-q">Al + O₂ → Al₂O₃</div><div class="ccard-steps">Al: 4=4 ✓ | O: 6=6 ✓</div><div class="ccard-result">∴ 4Al + 3O₂ → 2Al₂O₃</div></div>
+  <div class="section-pill pill-gold">أنواع التفاعلات الكيميائية</div>
+  <div class="tbl-wrap"><table class="ktbl">
+    <tr><th>النوع</th><th>الشكل العام</th><th>مثال موزون</th></tr>
+    <tr><td class="ans-cell">التكوين</td><td>A + B → AB</td><td>2Al + 3S → Al₂S₃</td></tr>
+    <tr><td class="ans-cell">الاحتراق</td><td>مادة + O₂ → CO₂ + H₂O</td><td>C₃H₈ + 5O₂ → 3CO₂ + 4H₂O</td></tr>
+    <tr><td class="ans-cell">التفكك</td><td>AB → A + B</td><td>2NaHCO₃ → Na₂CO₃ + H₂O + CO₂</td></tr>
+    <tr><td class="ans-cell">إحلال بسيط</td><td>A + BC → AC + B</td><td>2Na + 2H₂O → 2NaOH + H₂</td></tr>
+    <tr><td class="ans-cell">إحلال مزدوج</td><td>AB + CD → AD + CB</td><td>Na₂SO₄ + Pb(NO₃)₂ → PbSO₄↓ + 2NaNO₃</td></tr>
+  </table></div>
+</div>
+<div class="print-footer" style="display:none;">Antar Al-Shuwaikh | 0567038457 | مراجعة الكيمياء — الأول الثانوي</div>
+
+<div class="divider"></div>
+
+<!-- ══ LESSON 14 ══ -->
+<div class="lesson-block" id="d14">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">١٤</div>
+    <div class="lesson-title">الدرس الرابع عشر: تصنيف التفاعلات</div>
+  </div>
+  <div class="summary-box no-print"><ul><li>الإحلال البسيط: A + BC → AC + B (الأكثر نشاطاً يحل محل الأقل)</li><li>الإحلال المزدوج: AB + CD → AD + CB (تبادل الأيونات)</li><li>الراسب: مادة صلبة تتكوّن في محلول، يُشار إليها بـ ↓</li><li>سلسلة النشاط الكيميائي تحدد أيّ الفلزات يحل محل الآخر</li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d14" onclick="toggleQuiz('d14')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d14">
+  <div>النتيجة: <span class="score-num" id="sc_d14">0</span> / <span id="st_d14">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d14')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-green">المصطلح العلمي</div>
+  <div class="tbl-wrap"><table class="ktbl">
+    <tr><th>#</th><th>العبارة</th><th>المصطلح</th></tr>
+    <tr><td>١</td><td>مادتان تتحدان لتكوين مادة واحدة</td><td class="ans-cell">تفاعل التكوين</td></tr>
+    <tr><td>٢</td><td>تفاعل مادة مع الأكسجين مع إنتاج طاقة</td><td class="ans-cell">تفاعل الاحتراق</td></tr>
+    <tr><td>٣</td><td>مركب يتفكك إلى عنصرين أو أكثر</td><td class="ans-cell">تفاعل التفكك</td></tr>
+    <tr><td>٤</td><td>ذرات عنصر تحل محل ذرات عنصر آخر</td><td class="ans-cell">تفاعل الإحلال البسيط</td></tr>
+    <tr><td>٥</td><td>تبادل الأيونات بين مركبَين</td><td class="ans-cell">تفاعل الإحلال المزدوج</td></tr>
+    <tr><td>٦</td><td>مادة صلبة تنتج في المحلول خلال التفاعل</td><td class="ans-cell">الراسب</td></tr>
+  </table></div>
+  <div class="section-pill pill-green">علل</div>
+  <div class="wcard"><div class="wcard-q">الفلز الأكثر نشاطاً يحل دائماً محل الأقل نشاطاً في محاليله؟</div><div class="wcard-a">لأنه يميل لفقدان إلكتروناته بشكل أسهل، مما يجعله يزيح الفلز الأقل نشاطاً من محلوله وفق سلسلة النشاط الكيميائي.</div></div>
+  <div class="section-pill pill-gold">صنّف ووازن التفاعلات</div>
+  <div class="tbl-wrap"><table class="ktbl">
+    <tr><th>التفاعل الأصلي</th><th>المعادلة الموزونة</th><th>النوع</th></tr>
+    <tr><td>Al + S → Al₂S₃</td><td class="ans-cell">2Al + 3S → Al₂S₃</td><td class="ans-cell">تكوين</td></tr>
+    <tr><td>C₃H₈ + O₂ → CO₂ + H₂O</td><td class="ans-cell">C₃H₈ + 5O₂ → 3CO₂ + 4H₂O</td><td class="ans-cell">احتراق</td></tr>
+    <tr><td>NaHCO₃ → Na₂CO₃ + H₂O + CO₂</td><td class="ans-cell">2NaHCO₃ → Na₂CO₃ + H₂O + CO₂↑</td><td class="ans-cell">تفكك</td></tr>
+    <tr><td>Na + H₂O → NaOH + H₂</td><td class="ans-cell">2Na + 2H₂O → 2NaOH + H₂↑</td><td class="ans-cell">إحلال بسيط</td></tr>
+    <tr><td>Na₂SO₄ + Pb(NO₃)₂ → ?</td><td class="ans-cell">Na₂SO₄ + Pb(NO₃)₂ → PbSO₄↓ + 2NaNO₃</td><td class="ans-cell">إحلال مزدوج</td></tr>
+  </table></div>
+</div>
+<div class="print-footer" style="display:none;">Antar Al-Shuwaikh | 0567038457 | مراجعة الكيمياء — الأول الثانوي</div>
+
+<div class="divider"></div>
+
+<!-- ══ LESSON 15 ══ -->
+<div class="lesson-block" id="d15">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">١٥</div>
+    <div class="lesson-title">الدرس الخامس عشر: التفاعلات في المحاليل المائية</div>
+  </div>
+  <div class="summary-box no-print"><ul><li>المحلول المائي: مواد مذابة في الماء (مذاب + مذيب)</li><li><span class="summary-key">المعادلة الأيونية الكاملة:</span> تُظهر كل الأيونات</li><li><span class="summary-key">المعادلة الأيونية النهائية:</span> الأيونات المشاركة فقط (بدون المتفرجة)</li><li>الأيون المتفرج: لا يُشارك في التفاعل — يُحذف من المعادلة النهائية</li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d15" onclick="toggleQuiz('d15')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d15">
+  <div>النتيجة: <span class="score-num" id="sc_d15">0</span> / <span id="st_d15">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d15')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-green">المصطلح العلمي</div>
+  <div class="tbl-wrap"><table class="ktbl">
+    <tr><th>#</th><th>العبارة</th><th>المصطلح</th></tr>
+    <tr><td>١</td><td>المحلول الذي يحتوي مواد مذابة في الماء</td><td class="ans-cell">المحلول المائي</td></tr>
+    <tr><td>٢</td><td>المادة المذابة (الأقل كمية)</td><td class="ans-cell">المذاب</td></tr>
+    <tr><td>٣</td><td>المادة التي تُذيب المذاب (الأكثر كمية)</td><td class="ans-cell">المذيب</td></tr>
+    <tr><td>٤</td><td>المعادلة التي تُبيّن كافة الجسيمات بصورتها الواقعية</td><td class="ans-cell">المعادلة الأيونية الكاملة</td></tr>
+    <tr><td>٥</td><td>المعادلة التي تشمل الجسيمات المشاركة فقط</td><td class="ans-cell">المعادلة الأيونية النهائية</td></tr>
+    <tr><td>٦</td><td>الأيون الذي لم يُشارك في التفاعل</td><td class="ans-cell">الأيون المتفرج</td></tr>
+  </table></div>
+  <div class="section-pill pill-blue">المعادلات الأيونية</div>
+  <div class="ionic-card">
+    <div class="ionic-title">① تكوين راسب — FeCl₃ + NaOH</div>
+    <div class="ionic-row"><span class="ionic-label">الموزونة</span> FeCl₃(aq) + 3NaOH(aq) → Fe(OH)₃(s) + 3NaCl(aq)</div>
+    <div class="ionic-row"><span class="ionic-label">الكاملة</span> Fe³⁺ + 3Cl⁻ + 3Na⁺ + 3OH⁻ → Fe(OH)₃↓ + 3Na⁺ + 3Cl⁻</div>
+    <div class="ionic-row ionic-final"><span class="ionic-label">النهائية</span> Fe³⁺(aq) + 3OH⁻(aq) → Fe(OH)₃(s)</div>
+  </div>
+  <div class="ionic-card">
+    <div class="ionic-title">② تكوين ماء — HCl + Ca(OH)₂</div>
+    <div class="ionic-row"><span class="ionic-label">الموزونة</span> 2HCl(aq) + Ca(OH)₂(aq) → 2H₂O(l) + CaCl₂(aq)</div>
+    <div class="ionic-row"><span class="ionic-label">الكاملة</span> 2H⁺ + 2Cl⁻ + Ca²⁺ + 2OH⁻ → 2H₂O + Ca²⁺ + 2Cl⁻</div>
+    <div class="ionic-row ionic-final"><span class="ionic-label">النهائية</span> H⁺(aq) + OH⁻(aq) → H₂O(l)</div>
+  </div>
+  <div class="ionic-card">
+    <div class="ionic-title">③ تكوين غاز — HBr + K₂S</div>
+    <div class="ionic-row"><span class="ionic-label">الموزونة</span> 2HBr(aq) + K₂S(aq) → H₂S(g) + 2KBr(aq)</div>
+    <div class="ionic-row"><span class="ionic-label">الكاملة</span> 2H⁺ + 2Br⁻ + 2K⁺ + S²⁻ → H₂S↑ + 2K⁺ + 2Br⁻</div>
+    <div class="ionic-row ionic-final"><span class="ionic-label">النهائية</span> 2H⁺(aq) + S²⁻(aq) → H₂S(g)</div>
+  </div>
+</div>
+<div class="print-footer" style="display:none;">Antar Al-Shuwaikh | 0567038457 | مراجعة الكيمياء — الأول الثانوي</div>
+
+<div class="divider"></div>
+
+<!-- ══ LESSONS 16-17 ══ -->
+<div class="lesson-block" id="d16">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">١٦</div>
+    <div class="lesson-title">الدرس السادس عشر: قياس المادة — المول</div>
+  </div>
+  <div class="summary-box no-print"><ul><li><span class="summary-key">المول:</span> وحدة كمية المادة في النظام الدولي SI</li><li>عدد أفوجادرو = <span class="summary-formula">6.022 × 10²³</span> جسيم/مول</li><li><span class="summary-formula">N = n × Nₐ</span> &nbsp;|&nbsp; <span class="summary-formula">n = N ÷ Nₐ</span></li><li><span class="summary-formula">n = كمية المادة (مول) | N = عدد الجسيمات | Nₐ = 6.022×10²³</span></li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d16" onclick="toggleQuiz('d16')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d16">
+  <div>النتيجة: <span class="score-num" id="sc_d16">0</span> / <span id="st_d16">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d16')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-green">تعريفات</div>
+  <div class="wcard"><div class="wcard-q">المول</div><div class="wcard-a">وحدة قياس كمية المادة في النظام الدولي (SI). يحتوي المول على 6.022 × 10²³ جسيماً (ذرات أو جزيئات أو أيونات) — وهذا العدد يُسمى عدد أفوجادرو. مثال: مول Al = 27g يحتوي 6.022×10²³ ذرة.</div></div>
+  <div class="wcard"><div class="wcard-q">عدد أفوجادرو</div><div class="wcard-a">6.022 × 10²³ جسيم لكل مول من أي مادة.</div></div>
+  <div class="wcard"><div class="wcard-q">لماذا يستعمل الكيميائيون المول؟</div><div class="wcard-a">لأن الذرات أصغر من أن تُعدّ مباشرةً، فالمول يُمكّن من قياس كمياتها عبر الكتلة القابلة للوزن.</div></div>
+  <div class="section-pill pill-amber">حسابات المول</div>
+  <div class="ccard">
+    <div class="ccard-q">احسب عدد ذرات Zn في 2.5 mol:</div>
+    <div class="ccard-steps">عدد الذرات = 2.5 × 6.022×10²³ = 1.506×10²⁴</div>
+    <div class="ccard-result">∴ 1.506 × 10²⁴ ذرة Zn</div>
+  </div>
+  <div class="ccard">
+    <div class="ccard-q">ما عدد المولات في 5.75×10²⁴ ذرة Al؟</div>
+    <div class="ccard-steps">عدد المولات = عدد الجسيمات ÷ عدد أفوجادرو = 5.75×10²⁴ ÷ 6.022×10²³</div>
+    <div class="ccard-result">∴ 9.55 mol</div>
+  </div>
+  <div class="section-pill pill-blue">MCQ</div>
+  <div class="mcq-grid">
+    <div class="mcq"><div class="mcq-num">١</div><div class="mcq-body"><div class="mcq-q">عدد المولات في 3.75×10²⁴ جزيء CO₂</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">≈ 6.23 mol</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٢</div><div class="mcq-body"><div class="mcq-q">عدد جزيئات H₂O في 11.5 mol</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">6.93×10²⁴ جزيء</div></div></div></div>
+  </div>
+</div>
+
+<div class="lesson-block" id="d17">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">١٧</div>
+    <div class="lesson-title">الدرس السابع عشر: الكتلة والمول</div>
+  </div>
+  <div class="summary-box no-print"><ul><li><span class="summary-key">الكتلة المولية (M):</span> كتلة مول واحد بالجرام — تساوي عدده الذري عددياً</li><li><span class="summary-formula">m = n × M</span> &nbsp;|&nbsp; <span class="summary-formula">n = m ÷ M</span></li><li>m = الكتلة (g) | n = عدد المولات | M = الكتلة المولية (g/mol)</li><li>مثال: M(Al)=27 g/mol | M(H₂O)=18 g/mol | M(NaCl)=58.5 g/mol</li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d17" onclick="toggleQuiz('d17')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d17">
+  <div>النتيجة: <span class="score-num" id="sc_d17">0</span> / <span id="st_d17">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d17')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-blue">MCQ</div>
+  <div class="mcq-grid">
+    <div class="mcq"><div class="mcq-num">١</div><div class="mcq-body"><div class="mcq-q">الكتلة بالجرام لمول واحد من أي مادة</div><div class="mcq-ans"><div class="ans-dot">ب</div><div class="ans-text">الكتلة المولية</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٢</div><div class="mcq-body"><div class="mcq-q">وحدة الكتلة المولية</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">g/mol</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٣</div><div class="mcq-body"><div class="mcq-q">عدد ذرات Ti في 120g (M=48 g/mol)</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">1.506×10²⁴ ذرة</div></div></div></div>
+    <div class="mcq"><div class="mcq-num">٤</div><div class="mcq-body"><div class="mcq-q">كتلة 1.5×10²³ ذرة Al (M=27)</div><div class="mcq-ans"><div class="ans-dot">ج</div><div class="ans-text">6.72 g</div></div></div></div>
+  </div>
+  <div class="section-pill pill-amber">حسابات</div>
+  <div class="ccard">
+    <div class="ccard-q">احسب كتلة 3.57 mol من Al (M = 27 g/mol):</div>
+    <div class="ccard-steps">الكتلة = n × M = 3.57 × 27 = 96.39</div>
+    <div class="ccard-result">∴ 96.39 g ≈ 96.4 g</div>
+  </div>
+  <div class="ccard">
+    <div class="ccard-q">احسب مولات 11.5 g من Hg (M = 200 g/mol):</div>
+    <div class="ccard-steps">عدد المولات = الكتلة ÷ الكتلة المولية = 11.5 ÷ 200</div>
+    <div class="ccard-result">∴ 0.0575 mol</div>
+  </div>
+</div>
+<div class="print-footer" style="display:none;">Antar Al-Shuwaikh | 0567038457 | مراجعة الكيمياء — الأول الثانوي</div>
+
+<div class="divider"></div>
+
+<!-- ══ LESSON 18 ══ -->
+<div class="lesson-block" id="d18">
+  <div class="lesson-hdr">
+    <label class="lesson-check no-print"><input type="checkbox"><span class="check-box">✓</span></label><div class="lesson-num">١٨</div>
+    <div class="lesson-title">الدرس الثامن عشر: مولات المركبات</div>
+  </div>
+  <div class="summary-box no-print"><ul><li>M(المركب) = Σ (كتلة ذرية × عدد الذرات) لكل عنصر</li><li><span class="summary-formula">Al₂(SO₄)₃: 2×27 + 3×(32+64) = 342 g/mol</span></li><li><span class="summary-formula">ذرات عنصر في كمية معينة = n(مركب) × عدده في الصيغة × Nₐ</span></li><li>تحويل: g ÷ M = mol → mol × Nₐ = عدد الجسيمات</li></ul></div>
+<button class="quiz-toggle no-print" id="qt_d18" onclick="toggleQuiz('d18')">🧪 وضع الاختبار الذاتي</button>
+<div class="score-banner no-print" id="sb_d18">
+  <div>النتيجة: <span class="score-num" id="sc_d18">0</span> / <span id="st_d18">0</span> ✓</div>
+  <button class="score-reset" onclick="resetQuiz('d18')">إعادة المحاولة</button>
+</div>
+<div class="section-pill pill-amber">الكتلة المولية للمركبات</div>
+  <div class="ccard">
+    <div class="ccard-q">Al₂(SO₄)₃</div>
+    <div class="ccard-steps">= 2(27) + 3[32 + 4(16)] = 54 + 3(96) = 54 + 288</div>
+    <div class="ccard-result">∴ 342 g/mol</div>
+  </div>
+  <div class="ccard">
+    <div class="ccard-q">Ca(OH)₂</div>
+    <div class="ccard-steps">= 40 + 2(16+1) = 40 + 34</div>
+    <div class="ccard-result">∴ 74 g/mol</div>
+  </div>
+  <div class="ccard">
+    <div class="ccard-q">(C₃H₅)₂S</div>
+    <div class="ccard-steps">= 2(3×12 + 5×1) + 32 = 2(41) + 32 = 82 + 32</div>
+    <div class="ccard-result">∴ 114 g/mol</div>
+  </div>
+  <div class="ccard">
+    <div class="ccard-q">Fe₂(SO₄)₃</div>
+    <div class="ccard-steps">= 2(56) + 3[32+4(16)] = 112 + 288</div>
+    <div class="ccard-result">∴ 400 g/mol</div>
+  </div>
+  <div class="ccard">
+    <div class="ccard-q">(NH₄)₂CO₃</div>
+    <div class="ccard-steps">= 2(14+4) + 12 + 3(16) = 36 + 60</div>
+    <div class="ccard-result">∴ 96 g/mol</div>
+  </div>
+  <div class="section-pill pill-amber">تحويلات المول</div>
+  <div class="ccard">
+    <div class="ccard-q">كتلة 3.25 mol من H₂SO₄ (M = 98 g/mol):</div>
+    <div class="ccard-steps">الكتلة = 3.25 × 98</div>
+    <div class="ccard-result">∴ 318.5 g</div>
+  </div>
+  <div class="ccard">
+    <div class="ccard-q">مولات 2.5 kg من Fe₂O₃ (M = 160 g/mol):</div>
+    <div class="ccard-steps">تحويل: 2.5 kg = 2500 g &nbsp;|&nbsp; عدد المولات = 2500 ÷ 160</div>
+    <div class="ccard-result">∴ 15.625 mol</div>
+  </div>
+  <div class="ccard">
+    <div class="ccard-q">مولات SO₄²⁻ في 5.00 mol من Fe₂(SO₄)₃ (كل مول يحوي 3 مولات SO₄²⁻):</div>
+    <div class="ccard-steps">= 5.00 × 3</div>
+    <div class="ccard-result">∴ 15.0 mol SO₄²⁻</div>
+  </div>
+  <div class="ccard">
+    <div class="ccard-q">مولات O في 7 mol من P₂O₅ (كل مول يحوي 5 مولات O):</div>
+    <div class="ccard-steps">= 7 × 5</div>
+    <div class="ccard-result">∴ 35 mol O</div>
+  </div>
+  <div class="ccard">
+    <div class="ccard-q">عدد ذرات O في 52g من CO₂ (M=44):</div>
+    <div class="ccard-steps">
+      مولات CO₂ = 52 ÷ 44 = 1.182 mol<br>
+      مولات O = 1.182 × 2 = 2.364 mol<br>
+      عدد ذرات O = 2.364 × 6.022×10²³ = 14.23×10²³
+    </div>
+    <div class="ccard-result">∴ 1.423×10²⁴ ذرة O</div>
+  </div>
+  <div class="ccard">
+    <div class="ccard-q">مولات Ca في 325g من Ca(OH)₂ (M=74 g/mol):</div>
+    <div class="ccard-steps">عدد المولات = الكتلة ÷ الكتلة المولية = 325 ÷ 74 = 4.392</div>
+    <div class="ccard-result">∴ 4.39 mol Ca (تقريباً)</div>
+  </div>
+</div>
+
+</main><!-- end content -->
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <strong>Antar Al-Shuwaikh</strong> &nbsp;|&nbsp; أ. عنتر الشويخ &nbsp;|&nbsp; 0567038457 &nbsp;|&nbsp; مراجعة الكيمياء — الأول الثانوي — الترم الأول
+</footer>
+
+
+
+<!-- PRINT HEADER (hidden on screen) -->
+<div class="print-header" style="display:none;">
+  <div><strong>Antar Al-Shuwaikh</strong> &nbsp;|&nbsp; 0567038457</div>
+  <div style="font-size:13px;font-weight:700;">مراجعة الكيمياء — الأول الثانوي — الترم الأول</div>
+  <div id="printDate"></div>
+</div>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar no-print" id="progressBar">
+  <span>تقدمك: <span id="doneCount">0</span> / 18 درس</span>
+  <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
+  <span id="progPct">0%</span>
+</div>
+
+<script>
+// ── DARK MODE ──
+function toggleDark() {
+  document.body.classList.toggle('dark');
+  const btn = document.getElementById('darkBtn');
+  btn.textContent = document.body.classList.contains('dark') ? '☀ وضع نهاري' : '🌙 وضع ليلي';
+  localStorage.setItem('dark', document.body.classList.contains('dark') ? '1' : '0');
+}
+if (localStorage.getItem('dark') === '1') {
+  document.body.classList.add('dark');
+  setTimeout(() => { const b = document.getElementById('darkBtn'); if(b) b.textContent = '☀ وضع نهاري'; }, 100);
+}
+
+// ── TOGGLE ANSWERS ──
+let answersVisible = true;
+function toggleAllAnswers() {
+  answersVisible = !answersVisible;
+  document.body.classList.toggle('ans-hidden', !answersVisible);
+  const btn = document.getElementById('toggleAnswers');
+  btn.textContent = answersVisible ? '👁 إخفاء الإجابات' : '👁 إظهار الإجابات';
+}
+
+// ── DOWNLOAD HTML ──
+function downloadHTML() {
+  const content = document.documentElement.outerHTML;
+  const blob = new Blob([content], { type: 'text/html;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'Chemistry_Review_Grade10_Term1_Antar.html';
+  a.click();
+}
+
+// ── LESSON PROGRESS ──
+function updateProgress() {
+  const checks = document.querySelectorAll('.lesson-check input');
+  const done = [...checks].filter(c => c.checked).length;
+  const total = checks.length;
+  const pct = total ? Math.round(done / total * 100) : 0;
+  document.getElementById('doneCount').textContent = done;
+  document.getElementById('progFill').style.width = pct + '%';
+  document.getElementById('progPct').textContent = pct + '%';
+}
+
+document.querySelectorAll('.lesson-check input').forEach(cb => {
+  cb.addEventListener('change', function() {
+    this.closest('.lesson-block').classList.toggle('done', this.checked);
+    updateProgress();
+    saveProgress();
+  });
+});
+
+// ── SAVE / RESTORE PROGRESS ──
+function saveProgress() {
+  const state = [...document.querySelectorAll('.lesson-check input')].map(c => c.checked ? 1 : 0);
+  localStorage.setItem('chem_progress', JSON.stringify(state));
+}
+function loadProgress() {
+  const saved = localStorage.getItem('chem_progress');
+  if (!saved) return;
+  const state = JSON.parse(saved);
+  document.querySelectorAll('.lesson-check input').forEach((cb, i) => {
+    if (state[i]) {
+      cb.checked = true;
+      cb.closest('.lesson-block').classList.add('done');
+    }
+  });
+  updateProgress();
+}
+loadProgress();
+
+// ── SMOOTH SCROLL ──
+function goTo(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const offset = document.querySelector('.toc-bar').offsetHeight + 8;
+  const top = el.getBoundingClientRect().top + window.scrollY - offset;
+  window.scrollTo({ top, behavior: 'smooth' });
+}
+
+
+// ══ SEARCH ══
+function doSearch(q) {
+  q = q.trim();
+  const clearBtn = document.getElementById('searchClear');
+  const countEl = document.getElementById('searchCount');
+  clearBtn.classList.toggle('visible', q.length > 0);
+
+  // Remove old highlights
+  document.querySelectorAll('mark.hit').forEach(m => {
+    m.replaceWith(document.createTextNode(m.textContent));
+  });
+  // Normalize text nodes
+  document.querySelectorAll('.mcq-q, .wcard-q, .wcard-a, .ccard-q, .ccard-steps').forEach(el => el.normalize());
+
+  if (!q) {
+    document.querySelectorAll('.mcq, .wcard, .ccard').forEach(el => el.classList.remove('no-match'));
+    document.querySelectorAll('.lesson-block').forEach(el => el.classList.remove('all-hidden'));
+    countEl.textContent = '';
+    return;
+  }
+
+  const re = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'gi');
+  let total = 0;
+
+  // Highlight and show/hide cards
+  document.querySelectorAll('.mcq, .wcard, .ccard').forEach(card => {
+    const texts = card.querySelectorAll('.mcq-q, .wcard-q, .wcard-a, .ccard-q, .ccard-steps');
+    let found = false;
+    texts.forEach(el => {
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      const nodes = [];
+      let n;
+      while ((n = walker.nextNode())) nodes.push(n);
+      nodes.forEach(node => {
+        if (re.test(node.textContent)) found = true;
+        re.lastIndex = 0;
+        const frag = document.createDocumentFragment();
+        let last = 0, m;
+        re.lastIndex = 0;
+        const txt = node.textContent;
+        while ((m = re.exec(txt)) !== null) {
+          frag.appendChild(document.createTextNode(txt.slice(last, m.index)));
+          const mark = document.createElement('mark');
+          mark.className = 'hit';
+          mark.textContent = m[0];
+          frag.appendChild(mark);
+          last = m.index + m[0].length;
+        }
+        re.lastIndex = 0;
+        if (last > 0) {
+          frag.appendChild(document.createTextNode(txt.slice(last)));
+          node.parentNode.replaceChild(frag, node);
+        }
+      });
+    });
+    card.classList.toggle('no-match', !found);
+    if (found) total++;
+  });
+
+  // Hide lessons where ALL cards are hidden
+  document.querySelectorAll('.lesson-block').forEach(block => {
+    const cards = block.querySelectorAll('.mcq, .wcard, .ccard');
+    const visible = [...cards].some(c => !c.classList.contains('no-match'));
+    block.classList.toggle('all-hidden', cards.length > 0 && !visible);
+  });
+
+  countEl.textContent = total ? `${total} نتيجة` : 'لا توجد نتائج';
+}
+
+function clearSearch() {
+  document.getElementById('searchInput').value = '';
+  doSearch('');
+}
+
+// ══ SELF-TEST ══
+const quizState = {}; // sid -> { correct, total, answered: Set }
+
+function toggleQuiz(sid) {
+  const btn = document.getElementById('qt_' + sid);
+  const block = document.getElementById(sid);
+  const active = btn.classList.toggle('active');
+  btn.textContent = active ? '✕ إيقاف الاختبار الذاتي' : '🧪 وضع الاختبار الذاتي';
+
+  if (!quizState[sid]) quizState[sid] = { correct: 0, total: 0, answered: new Set() };
+
+  block.querySelectorAll('.mcq').forEach((card, idx) => {
+    if (active) {
+      // Extract question, correct answer letter and text
+      const qEl = card.querySelector('.mcq-q');
+      const ansEl = card.querySelector('.mcq-ans');
+      const dotEl = card.querySelector('.ans-dot');
+      const txtEl = card.querySelector('.ans-text');
+      if (!qEl || !dotEl || !txtEl) return;
+
+      const correctLetter = dotEl.textContent.trim();
+      const correctText = txtEl.textContent.trim();
+
+      // Generate 3 plausible wrong choices from other answers in same lesson
+      const allAnswers = [...document.querySelectorAll(`#${sid} .ans-text`)]
+        .map(e => e.textContent.trim())
+        .filter(t => t !== correctText);
+      const shuffled = allAnswers.sort(() => Math.random() - .5).slice(0, 3);
+      const choices = [correctText, ...shuffled].sort(() => Math.random() - .5);
+
+      // Build choice buttons
+      const choicesDiv = document.createElement('div');
+      choicesDiv.className = 'quiz-choices';
+      choices.forEach(ch => {
+        const btn = document.createElement('button');
+        btn.className = 'choice-btn';
+        btn.textContent = ch;
+        btn.onclick = function() {
+          if (quizState[sid].answered.has(idx)) return;
+          quizState[sid].answered.add(idx);
+          quizState[sid].total++;
+          if (ch === correctText) {
+            btn.classList.add('correct');
+            quizState[sid].correct++;
+          } else {
+            btn.classList.add('wrong');
+            // show correct
+            choicesDiv.querySelectorAll('.choice-btn').forEach(b => {
+              if (b.textContent === correctText) b.classList.add('correct');
+            });
+          }
+          choicesDiv.querySelectorAll('.choice-btn').forEach(b => b.disabled = true);
+          // show reveal
+          const reveal = card.querySelector('.quiz-reveal');
+          if (reveal) reveal.classList.add('show');
+          updateScore(sid);
+        };
+        choicesDiv.appendChild(btn);
+      });
+
+      const reveal = document.createElement('div');
+      reveal.className = 'quiz-reveal';
+      reveal.innerHTML = `<div class="ans-dot" style="background:linear-gradient(135deg,#1a9a5c,#148a4f);color:white;min-width:24px;height:24px;font-size:12px;border-radius:50%;display:flex;align-items:center;justify-content:center;">${correctLetter}</div><span>${correctText}</span>`;
+
+      card.classList.add('quiz-mode');
+      card.querySelector('.mcq-body').appendChild(choicesDiv);
+      card.querySelector('.mcq-body').appendChild(reveal);
+    } else {
+      // Restore normal mode
+      card.classList.remove('quiz-mode');
+      card.querySelector('.quiz-choices')?.remove();
+      card.querySelector('.quiz-reveal')?.remove();
+      card.querySelectorAll('.choice-btn').forEach(b => b.remove());
+      ansEl?.style && (ansEl.style.display = '');
+    }
+  });
+
+  // Show/hide score banner
+  document.getElementById('sb_' + sid).classList.toggle('show', active);
+  if (!active) {
+    quizState[sid] = { correct: 0, total: 0, answered: new Set() };
+    updateScore(sid);
+  }
+}
+
+function updateScore(sid) {
+  const s = quizState[sid];
+  if (!s) return;
+  document.getElementById('sc_' + sid).textContent = s.correct;
+  document.getElementById('st_' + sid).textContent = s.total;
+}
+
+function resetQuiz(sid) {
+  quizState[sid] = { correct: 0, total: 0, answered: new Set() };
+  updateScore(sid);
+  // Re-enable all choice buttons in this lesson
+  document.querySelectorAll(`#${sid} .choice-btn`).forEach(b => {
+    b.disabled = false;
+    b.classList.remove('correct', 'wrong');
+  });
+  document.querySelectorAll(`#${sid} .quiz-reveal`).forEach(r => r.classList.remove('show'));
+}
+
+// ── PRINT DATE ──
+document.getElementById('printDate').textContent = new Date().toLocaleDateString('ar-SA');
+
+// ── FONT SIZE ──
+let fontSize = 15;
+function changeFont(delta) {
+  fontSize = Math.min(20, Math.max(12, fontSize + delta));
+  document.body.style.fontSize = fontSize + 'px';
+}
+</script>
+
+</body>
+</html>
